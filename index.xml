@@ -13,14 +13,32 @@
     <language>en</language>
     <lastBuildDate>Sun, 18 Feb 2024 19:30:06 +0800</lastBuildDate><atom:link href="https://swimmingliu.cn/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>YOLOSHOW - YOLOv5 / YOLOv7 / YOLOv8 GUI based on Pyside6</title>
+      <title>YOLOSHOW - YOLOv5/YOLOv7/YOLOv8/YOLOv9 GUI based on Pyside6</title>
       <link>https://swimmingliu.cn/posts/diary/yoloshow/</link>
       <pubDate>Sun, 18 Feb 2024 19:30:06 +0800</pubDate>
       
       <guid>https://swimmingliu.cn/posts/diary/yoloshow/</guid>
-      <description>Introduction YOLOSHOW is a graphical user interface (GUI) application embed withYOLOv5 YOLOv7 YOLOv8 algorithm.
-Functions 1. Support Image / Video / Webcam / Folder (Batch ) Object Detection Choose Image / Video / Webcam / Folder (Batch ) in the menu bar on the left to detect objects.
-2. Change Models / Hyper Parameters dynamically When the program is running to detect targets, you can change models / hyper Parameters</description>
+      <description>Introduction YOLOSHOW is a graphical user interface (GUI) application embed withYOLOv5 YOLOv7 YOLOv8 YOLOv9 algorithm.
+English | 简体中文
+Demo Video Bilibili Demo Video : YOLOSHOW-YOLOv9/YOLOv8/YOLOv7/YOLOv5 GUI
+Todo List Add YOLOv9 Algorithm
+Adjust User Interface (Menu Bar)
+Complete Rtsp Function
+Functions 1. Support Image / Video / Webcam / Folder (Batch ) Object Detection Choose Image / Video / Webcam / Folder (Batch ) in the menu bar on the left to detect objects.</description>
+    </item>
+    
+    <item>
+      <title>YOLOSHOW中文版 - YOLOv5/YOLOv7/YOLOv8/YOLOv9 GUI based on Pyside6</title>
+      <link>https://swimmingliu.cn/posts/diary/yoloshow-cn/</link>
+      <pubDate>Sun, 18 Feb 2024 19:30:06 +0800</pubDate>
+      
+      <guid>https://swimmingliu.cn/posts/diary/yoloshow-cn/</guid>
+      <description>YOLOSHOW - YOLOv5 / YOLOv7 / YOLOv8 / YOLOv9 基于 Pyside6 的图形化界面 介绍 YOLOSHOW 是一款集合了 YOLOv5 YOLOv7 YOLOv8 YOLOv9 算法的图形化界面程序.
+English | 简体中文
+演示视频 B站演示视频 : YOLOSHOW-YOLOv9/YOLOv8/YOLOv7/YOLOv5 GUI
+待做清单 加入YOLOv9算法 调整UI (菜单栏) 完成Rtsp功能 功能 1. 支持 图片 / 视频 / 摄像头 / 文件夹（批量） 目标检测 选择左侧菜单栏的图片 / 视频 / 摄像头 / 文件夹（批量）进行目标检测
+2. 动态切换模型 / 调整超参数 程序开始检测时，支持动态切换模型 / 调整超参数
+支持动态切换 YOLOv5 / YOLOv7 / YOLOv8 / YOLOv9 模型 支持动态修改 IOU / Confidence / Delay time / line thickness 超参数 3.</description>
     </item>
     
     <item>
@@ -201,15 +219,6 @@ RELATED WORK Medical Image Segmentation Network 根据不同器官或病变的�
 为了提高分割性能，最近的研究倾向于采用具有更大参数和计算复杂度的模块，例如结合视觉变换器（ViT）的自注意力机制[7]。例如，Swin-UNet [4]，基于Swin Transformer [11]，利用自注意力机制的特征提取能力来提高分割性能。 TransUNet [5] 开创了用于医学图像分割的 CNN 和 ViT 的串行融合。 TransFuse [26]采用双路径结构，利用 CNN 和 ViT 分别捕获局部和全局信息。UTNetV2[8]利用混合分层架构、高效的双向注意力和语义图来实现全局多尺度特征融合，结合了CNN和ViT的优点。 TransBTS [23] 将自注意力引入脑肿瘤分割任务中，并用它来聚合高级信息。
 Abstract提到当前医学分割模型大部分是Transformer + Unet，这里做出具体阐述。
 先前的工作通过引入复杂的模块来提高性能，但忽略了实际医疗环境中计算资源的限制。因此，迫切需要为移动医疗中的分割任务设计一种低参数、低计算负载的模型。最近，UNeXt [22] 结合了 UNet [18] 和 MLP [21] 开发了一种轻量级模型，该模型可以获得优异的性能，同时减少参数和计算量。此外，MALUNet [19]通过减少模型通道数并引入多个注意力模块来减小模型大小，从而比 UNeXt 具有更好的皮肤病变分割性能。然而，尽管MALUNet大大减少了参数数量和计算量，但其分割性能仍然低于一些大型模型，例如TransFuse。因此，在本研究中，我们提出了 EGE-UNet，这是一种轻量级皮肤病变分割模型，可实现最先进的效果，同时显着降低参数和计算成本。此外，据我们所知，这是第一个将参数减少到大约 50KB 的工作。</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://swimmingliu.cn/aboutme/index1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://swimmingliu.cn/aboutme/index1/</guid>
-      <description> Name: 𝓢𝔀𝓲𝓶𝓶𝓲𝓷𝓰𝓛𝓲𝓾 👨🏻‍🎓 Age: 𝟮𝟯 Years Old 👦🏻 Country: 𝓒𝓱𝓲𝓷𝓪 🇨🇳 Education: Study in 𝓩𝓢𝓣𝓤 🏫 Education: Majoring 𝓒𝓸𝓶𝓹𝓾𝓽𝓮𝓻 𝓢𝓬𝓲𝓮𝓷𝓬𝓮 💻 Exploring the 𝓦𝓸𝓻𝓵𝓭 with 𝓒𝓸𝓶𝓹𝓾𝓽𝓮𝓻 𝓥𝓲𝓼𝓲𝓸𝓷 🌎 </description>
     </item>
     
     
