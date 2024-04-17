@@ -88,6 +88,9 @@ Introduction 随着现代深度神经网络的进步，语义图像分割取得�
     });
 </script>
 
+
+  
+
 <meta property="og:title" content="U-NET V2: RETHINKING THE SKIP CONNECTIONS OF U-NET FOR MEDICAL IMAGE SEGMENTATION" />
 <meta property="og:description" content="Abstract 在本文中，我们介绍了 U-Net v2，这是一种用于医学图像分割的新的稳健且高效的 U-Net 变体。它的目的是增强语义信息在低级特征中的注入，同时用更精细的细节来细化高级特征。对于输入图像，我们首先使用深度神经网络编码器提取多级特征。接下来，我们通过注入来自更高级别特征的语义信息并通过 Hadamard 乘积集成来自较低级别特征的更精细的细节来增强每个级别的特征图。我们新颖的跳跃连接赋予所有级别的功能以丰富的语义特征和复杂的细节。改进后的特征随后被传输到解码器以进行进一步处理和分割。我们的方法可以无缝集成到任何编码器-解码器网络中。我们在几个公共医学图像分割数据集上评估了我们的方法，用于皮肤病变分割和息肉分割，实验结果证明了我们的新方法相对于最先进的方法的分割准确性，同时保留了内存和计算效率。代码位于：https://github.com/yaoppeng/U-Net_v2。
 主要工作就在于中间的skip-connection
