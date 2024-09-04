@@ -57,9 +57,6 @@
 
     </style>
 </noscript>
-
-  
-
 <meta property="og:title" content="📝 Paper Notes" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
@@ -216,11 +213,7 @@ Introduction 肺癌是全球癌症相关死亡的主要原因[1]。仅在美国�
 在 CT 图像上识别肺结节提供了疾病的关键指标 [1], [3]。这些结节代表圆形异常，其大小各异，直径范围为 3 至 30 毫米 [7]。为了进一步研究肺结节，美国国家癌症研究所组装了“肺部图像数据库联盟和图像数据库资源计划（LIDC）”数据集[8]。
 欠发达地区设备不足、人员不足，导致医生的诊断和治疗时间有限[9]。在这种情况下，医生的工作量很大、重复且耗时[10]、[5]。此外，由于与CT切片相比，肺部结节性病变占据相对较小的面积，长时间和密集的CT筛查可能会导致漏检小的、细微的或 GGO (肺磨玻璃结节) [3]，[6]。为了解决这些问题，计算机辅助诊断系统（CAD）出现并得到了快速发展，特别是随着基于深度学习技术的诊断方法的进步。 CAD系统大大减轻了医生的工作量，最大限度地降低了未发现结节的风险，并提高了肺结节诊断的效率和可靠性。然而，当前用于肺结节分割的 CAD 系统仍然面临一些挑战。
 下面详细阐述了肺结节分割的几个现有挑战，可以从这些挑战入手
-首先，放射科医生标记的肺结节包含九个诊断特征[11]，异质性表型阻碍了肺结节分割的发展。如图1所示，实心结节（a，b）具有清晰的形状和边界，而微妙的GGO结节（e）具有低对比度和模糊的边界[4]，使得网络很容易将它们分类为背景区域。空洞（g）结节降低了网络分割的敏感性，并且由于背景和分割目标之间的极度不平衡，小结节很容易被遗漏[12]。
-由于周围多余的组织结构，血管旁或胸膜旁（c、d、f）可能会导致网络分类错误[13]。此外，部分实性结节（h）比纯GGO更致密，产生更复杂的异质纹理，更容易发展成恶性结节[14]。
-其次，肺结节内部因素造成的分割困难在于医生注释、层厚、数据来源和数据质量。数据质量差或不同医生的经验可能会导致不同的注释和注释者数量。由多名医生注释的病变区域通常更可靠，减少了潜在的临床风险。在资源有限的地区，由于 CT 扫描仪短缺和成像设备陈旧，CT 扫描质量差的情况很常见。较厚的切片更有可能产生“体积平均效应”和伪影，使医生难以达成一致的诊断。即使使用移动 CT 扫描仪也可能无法提供完整的诊断详细信息。最后，目前大多数肺结节分割方法都是基于2D图像，但这些方法忽略了空间关系，因此提出一种有效的3D肺结节分割模型来捕获肺结节的空间位置、纹理和其他详细信息变得越来越重要以避免误诊和漏诊。
-Challenge:
-异质性: 肺结节的形状多异 （实心结节、磨玻璃结节 (GGO) 、空洞结节、血管和胸膜旁边的结节）...</p>
+...</p>
   </div>
   <footer class="entry-footer"><span title='2024-03-03 15:37:07 +0800 +0800'>March 3, 2024</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;SwimmingLiu</footer>
   <a class="entry-link" aria-label="post link to A Dual-Branch Framework with Prior Knowledge for Precise Segmentation of Lung Nodules in Challenging CT Scans" href="https://swimmingliu.cn/posts/papernotes/2023-dbnet/"></a>
@@ -242,14 +235,7 @@ Programmable Gradient Information (PGI) Generalized Efficient Layer Aggregation 
 我们总结本文的贡献如下：
 我们从可逆函数的角度对现有的深度神经网络架构进行了理论分析，通过这个过程我们成功地解释了许多过去难以解释的现象。我们还基于此分析设计了PGI和辅助可逆分支，并取得了优异的结果。
 我们设计的PGI解决了深度监督只能用于极深的神经网络架构的问题，从而让新的轻量级架构真正应用于日常生活中。
-我们设计的GELAN仅使用常规卷积来实现比基于最先进技术的深度卷积设计更高的参数利用率，同时表现出轻、快速、准确的巨大优势。
-结合所提出的PGI和GELAN，YOLOv9在MS COCO数据集上的目标检测性能在各个方面都大大超过了现有的实时目标检测器。
-Programmable Gradient Information (PGI)：
-自由选择适合目标任务的损失函数
-可逆结构建立辅助分支，不增加推理成本
-适用于各种规模的深度神经网络
-GELAN：
-轻、快速、准确 采用常规卷积吊打其他新颖卷积 Related work 2.1 Real-time Object Detectors 目前主流的实时目标检测器是YOLO系列[2,7,13–15,25,30,31,47–49,61–63,74,75]，这些模型大多数使用CSPNet[64]或 ELAN [65] 及其变体作为主要计算单元。在特征集成方面，通常使用改进的PAN[37]或FPN[35]作为工具，然后使用改进的YOLOv3头[49]或FCOS头[57, 58]作为预测头。最近也提出了一些实时目标检测器，例如 RT DETR [43]，其基础是 DETR [4]。然而，由于DETR系列目标检测器在没有相应领域预训练模型的情况下很难应用于新领域，因此目前应用最广泛的实时目标检测器仍然是YOLO系列。本文选择 YOLOv7 [63] 作为开发该方法的基础，该方法已在各种计算机视觉任务和各种场景中被证明有效。...</p>
+...</p>
   </div>
   <footer class="entry-footer"><span title='2024-03-01 15:26:23 +0800 +0800'>March 1, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;SwimmingLiu</footer>
   <a class="entry-link" aria-label="post link to YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information" href="https://swimmingliu.cn/posts/papernotes/2024-yolov9/"></a>
@@ -267,8 +253,7 @@ Introduction 随着现代深度神经网络的进步，语义图像分割取得�
 对于编码器提取的特征，低级特征通常保留更多细节，但缺乏足够的语义信息，并且可能包含不需要的噪声。相反，高级特征包含更多语义信息，但由于分辨率显着降低而缺乏精确的细节（例如对象边界）。通过串联简单地融合特征将在很大程度上依赖于网络的学习能力，这通常与训练数据集的大小成正比。这是一个具有挑战性的问题，特别是在医学成像领域，通常受到有限数据的限制。这种信息融合是通过密集连接跨多个级别连接低级和高级特征来实现的，可能会限制来自不同级别的信息的贡献并可能引入噪声。另一方面，尽管引入的额外卷积并没有显着增加参数数量，但 GPU 内存消耗将会增加，因为必须存储所有中间特征图和相应的梯度以进行前向传递和后向梯度计算。这会导致 GPU 内存使用量和浮点运算 (FLOP) 增加。
 (a) U-Net v2 模型的整体架构，由编码器、SDI（语义和细节注入）模块和解码器组成。 (b) SDI模块的架构。为简单起见，我们仅显示第三级特征的细化（l = 3）。 SmoothConv 表示用于特征平滑的 3 × 3 卷积。$\bigotimes$ 表示哈达玛积。
 在[8]中，利用反向注意力来明确地建立多尺度特征之间的联系。在[9]中，ReLU激活应用于较高级别的特征，并将激活的特征与较低级别的特征相乘。此外，在[10]中，作者提出分别从 CNN 和 Transformer 模型中提取特征，在多个级别上组合来自 CNN 和 Transformer 分支的特征来增强特征图。然而，这些方法都很复杂，而且它们的性能仍然不是很令人满意，因此需要进一步改进。
-在本文中，我们提出了 U-Net v2，这是一种基于 U-Net 的新分割框架，具有简单且高效的跳跃连接。我们的模型首先使用 CNN 或 Transformer 编码器提取多级特征图。接下来，对于第 i 层的特征图，我们通过简单的哈达玛乘积操作显式地注入高层特征（包含更多语义信息）和低层特征（捕获更精细的细节），从而增强语义和细节第 i 级特征。随后，细化的特征被传输到解码器进行分辨率重建和分割。我们的方法可以无缝集成到任何编码器-解码器网络中。
-我们使用公开的数据集在两个医学图像分割任务（皮肤病变分割和息肉分割）上评估我们的新方法。实验结果表明，我们的 U-Net v2 在这些分割任务中始终优于最先进的方法，同时保持 FLOP 和 GPU 内存效率。...</p>
+...</p>
   </div>
   <footer class="entry-footer"><span title='2023-12-11 20:49:32 +0800 +0800'>December 11, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;SwimmingLiu</footer>
   <a class="entry-link" aria-label="post link to U-NET V2: RETHINKING THE SKIP CONNECTIONS OF U-NET FOR MEDICAL IMAGE SEGMENTATION" href="https://swimmingliu.cn/posts/papernotes/2023-unet_v2/"></a>
@@ -289,8 +274,7 @@ INTRODUCTION 肺结节分割在肺癌计算机辅助诊断 (CAD) 系统中至关
 在本文中，我们提出了一个论点，即多个注释之间的不确定性遵循特定的模式。
 为了演示这种现象，我们引入了多重置信掩码 (MCM)，它结合了高置信度 (HC) 掩码和低置信度 (LC) 掩码，如图 1 所示。 A. 交叉掩码等于 HC mask，代表所有注释的交集。
 联合掩码是所有注释的联合。 LC掩模是交集掩模和并集掩模之间的差异。当在 LIDC-IDRI 数据集 [11] 上计算 HC 和 LC 的 Hounsfield 单位 (HU) 核估计时，如图 1.B 所示，我们可以观察到 LC 和 HC 掩模之间的 HU 分布存在明显区别。具体地，LC区域具有比HC区域更低的HU值。从像素分布来看，HU值越低，对应区域的密度越低。就CT图像特征而言，LC区域主要由结节边缘、毛刺和磨玻璃特征等边界相关特征组成，而HC区域主要分布在结节核心内。因此，我们提出了这样的假设：导致放射科医生之间差异的区域主要与低密度组织和边界相关特征有关。
-与其他方法不同，我们建议利用 MCM (多重置信掩码) ** 和注释集作为具有不同分割确定性的特征的学习指导**，有助于更好的分割性能。我们将这种训练称为UncertaintyAware Attention Mechanism，如图2所示。按照这种机制，我们进一步设计了用于肺结节分割的Uncertainty-Guide Multi-Confidence Segmentation Network（UGMCS-Net）。
-UGMCS-Net 包含三个模块：基于 U-Net 的特征提取模块、不确定性感知模块和交集并集约束模块。...</p>
+...</p>
   </div>
   <footer class="entry-footer"><span title='2023-12-04 16:28:11 +0800 +0800'>December 4, 2023</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;SwimmingLiu</footer>
   <a class="entry-link" aria-label="post link to Uncertainty-Aware Attention Mechanism:利用不确定性感知注意机制进行肺结节分割和不确定区域预测" href="https://swimmingliu.cn/posts/papernotes/2023-uncertainty-aware-attentionmechanism/"></a>
@@ -317,8 +301,7 @@ Introduction 医学图像分割对于疾病的准确筛查和患者的预后具�
 利用网络编码器的深层、特征信息来生成空间注意力（WTF ???）
 中间监督、深度监督 （不错不错， 好多一区和顶会的文章都用深度监督）
 这项工作的贡献体现在三个方面。首先，我们提出了一种新颖的网络架构，通过将传统级联网络中的两个分割步骤结合在单个网络中，遵循 2D 和 3D 医学图像中多病灶分割的从粗到细的策略。与级联网络相比，所提出的架构以更少的额外计算成本实现了有竞争力的分割性能，更容易训练和部署到生产环境。其次，我们提出了一种监督空间注意力机制，将病变区域的注意力与网络提取的特征相结合，将多病变分割分解为两个更容易的阶段，并且与当前基于注意力的方法相比具有更好的可解释性。第三，所提出的网络已在两个实际应用中得到验证，包括肺部 CT 切片中的 COVID-19 病变的 2D 分割和多模态 MRI 中的脑肿瘤的 3D 分割。所提出的网络在 2D 和 3D 任务中都优于前沿方法，并且在参数和计算成本方面比当前网络更高效。
-一个网络、监督空间注意力机制、参数和计算成本方面比当前网络更高效。
-Related Work 1）图像分割的网络结构：用于图像分割的典型卷积神经网络通常由一个卷积特征提取器组成，其拓扑类似于常见的分类网络，自动从输入图像中提取特征，并进行基于卷积的操作以生成最终的密集预测。在自然图像分割领域，FCN [2]、DeepLab [8]、PSPNet [9] 和 SegNet [10] 因其性能和效率而颇受欢迎。对于医学分割，U-Net [3] 在许多任务中相当流行，并且已被修改为许多改进版本，例如 Attention U-Net [11]、U-Net&#43;&#43; [12]、V-Net [13] 和H-DenseUNet [14]在某些领域获得更好的性能。...</p>
+...</p>
   </div>
   <footer class="entry-footer"><span title='2023-11-28 14:55:47 +0800 +0800'>November 28, 2023</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;SwimmingLiu</footer>
   <a class="entry-link" aria-label="post link to Prior Attention Network: 用于医学图像中多病灶分割的预先注意网络" href="https://swimmingliu.cn/posts/papernotes/2022-priorattentionnetwork/"></a>
