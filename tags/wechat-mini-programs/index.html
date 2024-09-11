@@ -188,7 +188,7 @@
     <p>Introduction 基于知识图谱和neo4j图数据库的电影知识问答系统
 Workflow DataBase 爬取豆瓣TOP1000电影信息数据
 Frontend 获取用户输入的信息 （语音输入 / 文本输入） 向电影知识问答后端服务器发送请求 获取返回结果 (成功 -&gt; 4 / 失败 -&gt; 5) 如果返回结果包含image信息，则显示图片和文字，否则只显示文字 请求基于gpt的AI模型服务器，并显示返回结果 Backend ​	[准备工作] 训练 TF-IDF 向量算法和朴素贝叶斯分类器，用于预测用户文本所属的问题类别
-...</p>
+接受前端请求，获取用户输入信息 使用分词库解析用户输入的文本词性，提取关键词 根据贝叶斯分类器，分类出用户文本的问题类型 结合关键词与问题类别，在 Neo4j 中查询问题的答案 返回查询结果 （若问题类型为 演员信息 / 电影介绍，则附加图片url） WorkFlow Graph Frame DataBase Frontend ...</p>
   </div>
   <footer class="entry-footer"><span title='2023-12-12 12:18:57 +0800 +0800'>December 12, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;SwimmingLiu</footer>
   <a class="entry-link" aria-label="post link to MovieKGQA: 基于知识图谱和neo4j图数据库的电影知识问答系统" href="https://swimmingliu.cn/posts/diary/2023-moviekgqa/"></a>

@@ -195,6 +195,14 @@ Programmable Gradient Information (PGI) Generalized Efficient Layer Aggregation 
 我们总结本文的贡献如下：
 我们从可逆函数的角度对现有的深度神经网络架构进行了理论分析，通过这个过程我们成功地解释了许多过去难以解释的现象。我们还基于此分析设计了PGI和辅助可逆分支，并取得了优异的结果。
 我们设计的PGI解决了深度监督只能用于极深的神经网络架构的问题，从而让新的轻量级架构真正应用于日常生活中。
+我们设计的GELAN仅使用常规卷积来实现比基于最先进技术的深度卷积设计更高的参数利用率，同时表现出轻、快速、准确的巨大优势。
+结合所提出的PGI和GELAN，YOLOv9在MS COCO数据集上的目标检测性能在各个方面都大大超过了现有的实时目标检测器。
+Programmable Gradient Information (PGI)：
+自由选择适合目标任务的损失函数
+可逆结构建立辅助分支，不增加推理成本
+适用于各种规模的深度神经网络
+GELAN：
+轻、快速、准确 采用常规卷积吊打其他新颖卷积 Related work 2.1 Real-time Object Detectors 目前主流的实时目标检测器是YOLO系列[2,7,13–15,25,30,31,47–49,61–63,74,75]，这些模型大多数使用CSPNet[64]或 ELAN [65] 及其变体作为主要计算单元。在特征集成方面，通常使用改进的PAN[37]或FPN[35]作为工具，然后使用改进的YOLOv3头[49]或FCOS头[57, 58]作为预测头。最近也提出了一些实时目标检测器，例如 RT DETR [43]，其基础是 DETR [4]。然而，由于DETR系列目标检测器在没有相应领域预训练模型的情况下很难应用于新领域，因此目前应用最广泛的实时目标检测器仍然是YOLO系列。本文选择 YOLOv7 [63] 作为开发该方法的基础，该方法已在各种计算机视觉任务和各种场景中被证明有效。
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2024-03-01 15:26:23 +0800 +0800'>March 1, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;SwimmingLiu</footer>

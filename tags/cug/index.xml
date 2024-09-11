@@ -40,7 +40,36 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ultralytics/
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 安装相关依赖包&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;23-准备数据集&#34;&gt;2.3 准备数据集&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载需要训练的数据集 （最好找顶刊/顶会论文中的公开数据集）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;按照算法指定的数据集格式，对数据集格式进行调整。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;​		目标检测中数据集格式之间的相互转换：（VOC、COCO、YOLO格式）&lt;/p&gt;
+&lt;p&gt;​		https://zhuanlan.zhihu.com/p/461488682&lt;/p&gt;
+&lt;h3 id=&#34;24-开始实验&#34;&gt;2.4 开始实验&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在算法中指定数据集的存放路径 （相对/绝对路径均可）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;初始化算法的参数&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;batch-size  批处理大小：每一次处理图片的个数，根据显卡内存进行调整
+epochs	   迭代次数：算法总共需要训练的轮次
+workers     载入数据进程数：每一次调用多少个进程来载入数据
+device      选择显卡设备： &amp;#39;0&amp;#39;使用3090，&amp;#39;1&amp;#39;使用2080ti，&amp;#39;0,1&amp;#39;使用两张卡
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;开始训练&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 运行训练代码&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python mian.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(注：使用向日葵的同学，可以直接在Pycharm当中运行)&lt;/p&gt;</description>
     </item>
     
   </channel>

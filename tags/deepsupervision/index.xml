@@ -44,7 +44,12 @@
 &lt;p&gt;利用网络编码器的深层、特征信息来生成空间注意力（WTF ???）&lt;/p&gt;
 &lt;p&gt;中间监督、深度监督 （不错不错， 好多一区和顶会的文章都用深度监督）&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;这项工作的贡献体现在三个方面。&lt;strong&gt;首先&lt;/strong&gt;，我们提出了一种新颖的网络架构，通过将传统级联网络中的两个分割步骤结合在&lt;strong&gt;单个网络&lt;/strong&gt;中，遵循 2D 和 3D 医学图像中多病灶分割的&lt;strong&gt;从粗到细的策略&lt;/strong&gt;。与级联网络相比，所提出的架构以更少的额外计算成本实现了有竞争力的分割性能，更容易训练和部署到生产环境。&lt;strong&gt;其次&lt;/strong&gt;，我们提出了一种&lt;strong&gt;监督空间注意力机制&lt;/strong&gt;，将&lt;strong&gt;病变区域的注意力与网络提取的特征相结合&lt;/strong&gt;，将多病变分割分解为&lt;strong&gt;两个更容易的阶段&lt;/strong&gt;，并且与当前&lt;strong&gt;基于注意力的方法相比具有更好的可解释性&lt;/strong&gt;。&lt;strong&gt;第三&lt;/strong&gt;，所提出的网络已在两个实际应用中得到验证，&lt;strong&gt;包括肺部 CT 切片中的 COVID-19 病变的 2D 分割和多模态 MRI 中的脑肿瘤的 3D 分割&lt;/strong&gt;。所提出的网络在 2D 和 3D 任务中都优于前沿方法，并且在参数和计算成本方面比当前网络更高效。&lt;/p&gt;</description>
+&lt;p&gt;这项工作的贡献体现在三个方面。&lt;strong&gt;首先&lt;/strong&gt;，我们提出了一种新颖的网络架构，通过将传统级联网络中的两个分割步骤结合在&lt;strong&gt;单个网络&lt;/strong&gt;中，遵循 2D 和 3D 医学图像中多病灶分割的&lt;strong&gt;从粗到细的策略&lt;/strong&gt;。与级联网络相比，所提出的架构以更少的额外计算成本实现了有竞争力的分割性能，更容易训练和部署到生产环境。&lt;strong&gt;其次&lt;/strong&gt;，我们提出了一种&lt;strong&gt;监督空间注意力机制&lt;/strong&gt;，将&lt;strong&gt;病变区域的注意力与网络提取的特征相结合&lt;/strong&gt;，将多病变分割分解为&lt;strong&gt;两个更容易的阶段&lt;/strong&gt;，并且与当前&lt;strong&gt;基于注意力的方法相比具有更好的可解释性&lt;/strong&gt;。&lt;strong&gt;第三&lt;/strong&gt;，所提出的网络已在两个实际应用中得到验证，&lt;strong&gt;包括肺部 CT 切片中的 COVID-19 病变的 2D 分割和多模态 MRI 中的脑肿瘤的 3D 分割&lt;/strong&gt;。所提出的网络在 2D 和 3D 任务中都优于前沿方法，并且在参数和计算成本方面比当前网络更高效。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;一个网络、监督空间注意力机制、参数和计算成本方面比当前网络更高效。&lt;/p&gt;
+&lt;h2 id=&#34;related-work&#34;&gt;Related Work&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1）图像分割的网络结构：用于图像分割的典型卷积神经网络通常由一个卷积特征提取器组成，其拓扑类似于常见的分类网络，自动从输入图像中提取特征，并进行基于卷积的操作以生成最终的密集预测。在自然图像分割领域，FCN [2]、DeepLab [8]、PSPNet [9] 和 SegNet [10] 因其性能和效率而颇受欢迎。对于医学分割，U-Net [3] 在许多任务中相当流行，并且已被修改为许多改进版本，例如 Attention U-Net [11]、U-Net++ [12]、V-Net [13] 和H-DenseUNet [14]在某些领域获得更好的性能。&lt;/p&gt;</description>
     </item>
     
   </channel>
