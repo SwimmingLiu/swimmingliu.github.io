@@ -9,14 +9,14 @@
       <url>https://swimmingliu.cn/papermod-cover.png</url>
       <link>https://swimmingliu.cn/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.136.0</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 12 Dec 2023 12:18:57 +0800</lastBuildDate><atom:link href="https://swimmingliu.cn/tags/kgqa/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Dec 2023 12:18:57 +0800</lastBuildDate>
+    <atom:link href="https://swimmingliu.cn/tags/kgqa/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MovieKGQA: 基于知识图谱和neo4j图数据库的电影知识问答系统</title>
       <link>https://swimmingliu.cn/posts/diary/2023-moviekgqa/</link>
       <pubDate>Tue, 12 Dec 2023 12:18:57 +0800</pubDate>
-      
       <guid>https://swimmingliu.cn/posts/diary/2023-moviekgqa/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;基于知识图谱和neo4j图数据库的电影知识问答系统&lt;/p&gt;
@@ -56,6 +56,5 @@
 &lt;p&gt;&lt;a href=&#34;https://developers.weixin.qq.com/&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://img.shields.io/badge/wechat%20mini%20programs-test?style=for-the-badge&amp;amp;logo=wechat&amp;amp;logoColor=white&amp;amp;color=%2320B2AA&#34; alt=&#34;wechat mini programs&#34;  /&gt;
 &lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

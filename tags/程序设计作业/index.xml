@@ -9,14 +9,14 @@
       <url>https://swimmingliu.cn/papermod-cover.png</url>
       <link>https://swimmingliu.cn/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.136.0</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 02 Dec 2023 21:40:07 +0800</lastBuildDate><atom:link href="https://swimmingliu.cn/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%BD%9C%E4%B8%9A/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Dec 2023 21:40:07 +0800</lastBuildDate>
+    <atom:link href="https://swimmingliu.cn/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%BD%9C%E4%B8%9A/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>程序设计作业接口文档</title>
       <link>https://swimmingliu.cn/posts/diary/2023-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%BD%9C%E4%B8%9A%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/</link>
       <pubDate>Sat, 02 Dec 2023 21:40:07 +0800</pubDate>
-      
       <guid>https://swimmingliu.cn/posts/diary/2023-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%BD%9C%E4%B8%9A%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/</guid>
       <description>&lt;h1 id=&#34;程序设计作业接口文档&#34;&gt;程序设计作业接口文档&lt;/h1&gt;
 &lt;p&gt;统一返回格式&lt;/p&gt;
@@ -112,6 +112,5 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
   </channel>
 </rss>

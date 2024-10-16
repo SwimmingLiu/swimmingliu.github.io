@@ -9,14 +9,14 @@
       <url>https://swimmingliu.cn/papermod-cover.png</url>
       <link>https://swimmingliu.cn/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.136.0</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 Mar 2024 15:37:07 +0800</lastBuildDate><atom:link href="https://swimmingliu.cn/posts/papernotes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Mar 2024 15:37:07 +0800</lastBuildDate>
+    <atom:link href="https://swimmingliu.cn/posts/papernotes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Dual-Branch Framework with Prior Knowledge for Precise Segmentation of Lung Nodules in Challenging CT Scans</title>
       <link>https://swimmingliu.cn/posts/papernotes/2023-dbnet/</link>
       <pubDate>Sun, 03 Mar 2024 15:37:07 +0800</pubDate>
-      
       <guid>https://swimmingliu.cn/posts/papernotes/2023-dbnet/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -47,12 +47,10 @@
 &lt;li&gt;
 &lt;p&gt;异质性: 肺结节的形状多异 （实心结节、磨玻璃结节 (GGO) 、空洞结节、血管和胸膜旁边的结节）&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information</title>
       <link>https://swimmingliu.cn/posts/papernotes/2024-yolov9/</link>
       <pubDate>Fri, 01 Mar 2024 15:26:23 +0800</pubDate>
-      
       <guid>https://swimmingliu.cn/posts/papernotes/2024-yolov9/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -111,12 +109,10 @@ PGI可以为&lt;strong&gt;目标任务计算目标函数&lt;/strong&gt;提供&lt
 &lt;blockquote&gt;
 &lt;p&gt;目前主流的实时目标检测器是YOLO系列[2,7,13–15,25,30,31,47–49,61–63,74,75]，这些模型大多数使用CSPNet[64]或 ELAN [65] 及其变体作为主要计算单元。在特征集成方面，通常使用改进的PAN[37]或FPN[35]作为工具，然后使用改进的YOLOv3头[49]或FCOS头[57, 58]作为预测头。最近也提出了一些实时目标检测器，例如 RT DETR [43]，其基础是 DETR [4]。然而，由于DETR系列目标检测器在没有相应领域预训练模型的情况下很难应用于新领域，因此目前应用最广泛的实时目标检测器仍然是YOLO系列。本文选择 YOLOv7 [63] 作为开发该方法的基础，该方法已在各种计算机视觉任务和各种场景中被证明有效。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>U-NET V2: RETHINKING THE SKIP CONNECTIONS OF U-NET FOR MEDICAL IMAGE SEGMENTATION</title>
       <link>https://swimmingliu.cn/posts/papernotes/2023-unet_v2/</link>
       <pubDate>Mon, 11 Dec 2023 20:49:32 +0800</pubDate>
-      
       <guid>https://swimmingliu.cn/posts/papernotes/2023-unet_v2/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -138,12 +134,10 @@ PGI可以为&lt;strong&gt;目标任务计算目标函数&lt;/strong&gt;提供&lt
 &lt;p&gt;在本文中，我们提出了 U-Net v2，这是一种基于 U-Net 的新分割框架，具有&lt;strong&gt;简单且高效的跳跃连接&lt;/strong&gt;。我们的模型首先&lt;strong&gt;使用 CNN 或 Transformer 编码器&lt;/strong&gt;提取&lt;strong&gt;多级特征图&lt;/strong&gt;。接下来，&lt;strong&gt;对于第 i 层的特征图&lt;/strong&gt;，我们通过&lt;strong&gt;简单的哈达玛乘积操作&lt;/strong&gt;显式地注入&lt;strong&gt;高层特征（包含更多语义信息）&lt;strong&gt;和&lt;/strong&gt;低层特征（捕获更精细的细节）&lt;/strong&gt;，从而&lt;strong&gt;增强语义和细节第 i 级特征&lt;/strong&gt;。随后，&lt;strong&gt;细化的特征&lt;/strong&gt;被传输到解码器进行&lt;strong&gt;分辨率重建和分割&lt;/strong&gt;。我们的方法可以无缝集成到任何编码器-解码器网络中。&lt;/p&gt;
 &lt;p&gt;我们使用公开的数据集在两个医学图像分割任务（皮肤病变分割和息肉分割）上评估我们的新方法。实验结果表明，我们的 U-Net v2 在这些分割任务中始终优于最先进的方法，&lt;strong&gt;同时保持 FLOP 和 GPU 内存效率&lt;/strong&gt;。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Uncertainty-Aware Attention Mechanism:利用不确定性感知注意机制进行肺结节分割和不确定区域预测</title>
       <link>https://swimmingliu.cn/posts/papernotes/2023-uncertainty-aware-attentionmechanism/</link>
       <pubDate>Mon, 04 Dec 2023 16:28:11 +0800</pubDate>
-      
       <guid>https://swimmingliu.cn/posts/papernotes/2023-uncertainty-aware-attentionmechanism/</guid>
       <description>&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -165,12 +159,10 @@ PGI可以为&lt;strong&gt;目标任务计算目标函数&lt;/strong&gt;提供&lt
 &lt;blockquote&gt;
 &lt;p&gt;与其他方法不同，我们建议利用 &lt;strong&gt;MCM (多重置信掩码) ** 和注释集作为具有&lt;/strong&gt;不同分割确定性的特征的学习指导**，有助于更好的分割性能。我们将这种训练称为&lt;strong&gt;UncertaintyAware Attention Mechanism&lt;/strong&gt;，如图2所示。按照这种机制，我们进一步设计了用于肺结节分割的&lt;strong&gt;Uncertainty-Guide Multi-Confidence Segmentation Network&lt;/strong&gt;（UGMCS-Net）。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Prior Attention Network: 用于医学图像中多病灶分割的预先注意网络</title>
       <link>https://swimmingliu.cn/posts/papernotes/2022-priorattentionnetwork/</link>
       <pubDate>Tue, 28 Nov 2023 14:55:47 +0800</pubDate>
-      
       <guid>https://swimmingliu.cn/posts/papernotes/2022-priorattentionnetwork/</guid>
       <description>&lt;h1 id=&#34;prior-attention-network-用于医学图像中多病灶分割的预先注意网络&#34;&gt;Prior Attention Network: 用于医学图像中多病灶分割的预先注意网络&lt;/h1&gt;
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -205,12 +197,10 @@ PGI可以为&lt;strong&gt;目标任务计算目标函数&lt;/strong&gt;提供&lt
 &lt;blockquote&gt;
 &lt;p&gt;1）图像分割的网络结构：用于图像分割的典型卷积神经网络通常由一个卷积特征提取器组成，其拓扑类似于常见的分类网络，自动从输入图像中提取特征，并进行基于卷积的操作以生成最终的密集预测。在自然图像分割领域，FCN [2]、DeepLab [8]、PSPNet [9] 和 SegNet [10] 因其性能和效率而颇受欢迎。对于医学分割，U-Net [3] 在许多任务中相当流行，并且已被修改为许多改进版本，例如 Attention U-Net [11]、U-Net++ [12]、V-Net [13] 和H-DenseUNet [14]在某些领域获得更好的性能。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>ACC-UNet: A Completely Convolutional UNet model for the 2020s (MICCAI2023)</title>
       <link>https://swimmingliu.cn/posts/papernotes/2023-acc-unet/</link>
       <pubDate>Sun, 12 Nov 2023 16:32:06 +0800</pubDate>
-      
       <guid>https://swimmingliu.cn/posts/papernotes/2023-acc-unet/</guid>
       <description>&lt;h1 id=&#34;acc-unet-a-completely-convolutional-unet-model-for-the-2020s-miccai2023&#34;&gt;ACC-UNet: A Completely Convolutional UNet model for the 2020s (MICCAI2023)&lt;/h1&gt;
 &lt;h2 id=&#34;1-abstract&#34;&gt;1. Abstract&lt;/h2&gt;
@@ -228,12 +218,10 @@ ACC-UNet 在 5 个不同的医学图像分割基准上进行了评估，并且�
 &lt;blockquote&gt;
 &lt;p&gt;原始的 UNet 模型包含对称的编码器-解码器架构（图 1a）并采用跳跃连接，这为解码器提供了在编码器的池化操作期间可能丢失的空间信息。尽管通过简单串联的信息传播提高了性能，但编码器-解码器特征图之间可能存在语义差距。这导致了第二类 UNet 的发展（图 1b）。 U-Net++ [26] 利用密集连接，而 MultiResUNet [11] 在跳过连接上添加了额外的卷积块作为潜在的补救措施。到目前为止，UNet 的历史上所有创新都是使用 CNN 进行的。然而，2020 年的十年给计算机视觉领域带来了根本性的变化。 CNN 在视觉领域的长期主导地位被视觉转换器打破了 [7]。 Swin Transformers [15] 进一步针对一般视觉应用调整了变压器。因此，UNet 模型开始采用 Transformer [5]。 Swin-Unet [9] 用 Swin Transformer 块取代了卷积块，从而开创了一类新的模型（图 1c）。尽管如此，CNN 在图像分割方面仍然具有各种优点，导致了融合这两者的发展[2]。这种混合类 UNet 模型（图 1d）在编码器-解码器中采用卷积块，并沿跳跃连接使用变换器层。 UCTransNet [22]和MCTrans[24]是此类的两个代表性模型。最后，还尝试开发全变压器 UNet 架构（图 1e），例如，SMESwin Unet [27] 在编码器-解码器块和跳跃连接中都使用变压器。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>M2SNet: Multi-scale in Multi-scale Subtraction Network for Medical Image Segmentation</title>
       <link>https://swimmingliu.cn/posts/papernotes/2023-m2snet/</link>
       <pubDate>Sun, 12 Nov 2023 16:25:03 +0800</pubDate>
-      
       <guid>https://swimmingliu.cn/posts/papernotes/2023-m2snet/</guid>
       <description>&lt;h1 id=&#34;2023-m2snet-新颖多尺度模块--智能损失函数--通用图像分割sota网络&#34;&gt;(2023) M2SNet: 新颖多尺度模块 + 智能损失函数 = 通用图像分割SOTA网络&lt;/h1&gt;
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -262,12 +250,10 @@ ACC-UNet 在 5 个不同的医学图像分割基准上进行了评估，并且�
 &lt;p&gt;根据不同器官或病变的特点，我们将现有的医学图像分割方法分为两类：医学通用的和医学专用的。随着U-Net[2]在医学图像分割领域取得稳定的性能，带有编码器-解码器的U形结构已成为基本的分割基线。 U-Net++[9]集成了&lt;strong&gt;长连接和短连接&lt;/strong&gt;，可以减少编码器和解码器子网络的特征图之间的语义差距。对于注意力 U-Net [28]，&lt;strong&gt;注意力门&lt;/strong&gt;嵌入在编码器和解码器块之间的每个过渡层中，它可以自动学习关注不&lt;strong&gt;同形状和大小的目标结构&lt;/strong&gt;。最近，Transformer [29]架构在许多自然语言处理任务中取得了成功。一些作品[7]、[8]探讨了其对医学视觉任务的有效性。 UTNet [7] 是一种简单但功能强大的混合变压器架构，它在编码器和解码器中应用自注意力模块，以最小的开销捕获不同规模的远程依赖关系。另一个具有代表性的基于 Transformer 的模型是 TransUNet [8]，它通过将图像特征视为序列来编码强全局上下文，并通过 U 形混合架构设计利用低级 CNN 特征。&lt;/p&gt;
 &lt;p&gt;医学特定方法。在息肉分割任务中，SFA [30]和PraNet [4]专注于恢复息肉与其周围粘膜之间的清晰边界。前者提出了共享编码器和两个相互约束的解码器下的选择性特征聚合结构和边界敏感损失函数。后者利用反向注意模块来建立区域和边界线索之间的关系。此外，Ji等人[31]利用时空信息构建视频息肉分割模型。在COVID-19肺部感染任务中，Paluru等人[32]提出了一种基于变形深度嵌入的轻量级CNN来分割COVID-19胸部CT图像中的异常。 Inf-Net [33] 构建隐式反向注意力和显式边缘注意力来对边界进行建模。 BCS-Net [34]具有三个渐进边界上下文语义重建块，可以帮助解码器捕获肺部感染的零散区域。在乳腺分割任务中，Byra等人[35]通过注意力机制开发了选择性核来调整U-Net的感受野，可以进一步提高乳腺肿瘤的分割精度。 Chen 等人 [36] 提出了一种嵌套 U 网，通过利用不同的深度和共享权重来实现乳腺肿瘤的稳健表示。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>EGE-UNet: an Efficient Group Enhanced UNet for skin lesion segmentation</title>
       <link>https://swimmingliu.cn/posts/papernotes/2023-ege-unet%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Sat, 11 Nov 2023 19:51:21 +0800</pubDate>
-      
       <guid>https://swimmingliu.cn/posts/papernotes/2023-ege-unet%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/</guid>
       <description>&lt;h1 id=&#34;ege-unet-an-efficient-group-enhanced-unet-for-skin-lesion-segmentation&#34;&gt;EGE-UNet: an Efficient Group Enhanced UNet for skin lesion segmentation&lt;/h1&gt;
 &lt;h2 id=&#34;1-abstract&#34;&gt;1. Abstract&lt;/h2&gt;
@@ -288,6 +274,5 @@ ACC-UNet 在 5 个不同的医学图像分割基准上进行了评估，并且�
 &lt;blockquote&gt;
 &lt;p&gt;先前的工作通过引入复杂的模块来提高性能，但忽略了实际医疗环境中计算资源的限制。因此，迫切需要为移动医疗中的分割任务设计一种低参数、低计算负载的模型。最近，UNeXt [22] 结合了 UNet [18] 和 MLP [21] 开发了一种轻量级模型，该模型可以获得优异的性能，同时减少参数和计算量。此外，MALUNet [19]通过减少模型通道数并引入多个注意力模块来减小模型大小，从而比 UNeXt 具有更好的皮肤病变分割性能。然而，尽管MALUNet大大减少了参数数量和计算量，但其分割性能仍然低于一些大型模型，例如TransFuse。因此，在本研究中，我们提出了 EGE-UNet，这是一种轻量级皮肤病变分割模型，可实现最先进的效果，同时显着降低参数和计算成本。此外，据我们所知，这是第一个将参数减少到大约 50KB 的工作。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

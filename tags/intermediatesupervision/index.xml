@@ -9,14 +9,14 @@
       <url>https://swimmingliu.cn/papermod-cover.png</url>
       <link>https://swimmingliu.cn/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.136.0</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 Nov 2023 14:55:47 +0800</lastBuildDate><atom:link href="https://swimmingliu.cn/tags/intermediatesupervision/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Nov 2023 14:55:47 +0800</lastBuildDate>
+    <atom:link href="https://swimmingliu.cn/tags/intermediatesupervision/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Prior Attention Network: 用于医学图像中多病灶分割的预先注意网络</title>
       <link>https://swimmingliu.cn/posts/papernotes/2022-priorattentionnetwork/</link>
       <pubDate>Tue, 28 Nov 2023 14:55:47 +0800</pubDate>
-      
       <guid>https://swimmingliu.cn/posts/papernotes/2022-priorattentionnetwork/</guid>
       <description>&lt;h1 id=&#34;prior-attention-network-用于医学图像中多病灶分割的预先注意网络&#34;&gt;Prior Attention Network: 用于医学图像中多病灶分割的预先注意网络&lt;/h1&gt;
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
@@ -51,6 +51,5 @@
 &lt;blockquote&gt;
 &lt;p&gt;1）图像分割的网络结构：用于图像分割的典型卷积神经网络通常由一个卷积特征提取器组成，其拓扑类似于常见的分类网络，自动从输入图像中提取特征，并进行基于卷积的操作以生成最终的密集预测。在自然图像分割领域，FCN [2]、DeepLab [8]、PSPNet [9] 和 SegNet [10] 因其性能和效率而颇受欢迎。对于医学分割，U-Net [3] 在许多任务中相当流行，并且已被修改为许多改进版本，例如 Attention U-Net [11]、U-Net++ [12]、V-Net [13] 和H-DenseUNet [14]在某些领域获得更好的性能。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

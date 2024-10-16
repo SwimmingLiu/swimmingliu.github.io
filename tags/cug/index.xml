@@ -9,14 +9,14 @@
       <url>https://swimmingliu.cn/papermod-cover.png</url>
       <link>https://swimmingliu.cn/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.136.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Nov 2023 12:25:57 +0800</lastBuildDate><atom:link href="https://swimmingliu.cn/tags/cug/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Nov 2023 12:25:57 +0800</lastBuildDate>
+    <atom:link href="https://swimmingliu.cn/tags/cug/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>地大服务器使用教程</title>
       <link>https://swimmingliu.cn/posts/diary/2023-%E5%9C%B0%E5%A4%A7%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Mon, 20 Nov 2023 12:25:57 +0800</pubDate>
-      
       <guid>https://swimmingliu.cn/posts/diary/2023-%E5%9C%B0%E5%A4%A7%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description>&lt;h1 id=&#34;地大服务器使用教程&#34;&gt;地大服务器使用教程&lt;/h1&gt;
 &lt;h2 id=&#34;1-服务器环境介绍&#34;&gt;1. 服务器环境介绍&lt;/h2&gt;
@@ -71,6 +71,5 @@ device      选择显卡设备： &amp;#39;0&amp;#39;使用3090，&amp;#39;1&amp
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python mian.py
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;(注：使用向日葵的同学，可以直接在Pycharm当中运行)&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
