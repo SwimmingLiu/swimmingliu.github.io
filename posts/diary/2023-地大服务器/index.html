@@ -60,7 +60,7 @@ python mian.py
 (注：使用向日葵的同学，可以直接在Pycharm当中运行)">
 <meta name="author" content="SwimmingLiu">
 <link rel="canonical" href="https://swimmingliu.cn/posts/diary/2023-%E5%9C%B0%E5%A4%A7%E6%9C%8D%E5%8A%A1%E5%99%A8/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.54a9000c1de68f99d0b4f8af25ec77e176e8622935a2a71f5d26628c27b76a84.css" integrity="sha256-VKkADB3mj5nQtPivJex34XboYik1oqcfXSZijCe3aoQ=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6ecbb0040febd20e47edd88a662c19f1ea945bf7427774b86594271d18f88faf.css" integrity="sha256-bsuwBA/r0g5H7diKZiwZ8eqUW/dCd3S4ZZQnHRj4j68=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://swimmingliu.cn/images/swimmingliu_icon.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://swimmingliu.cn/images/swimmingliu_icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://swimmingliu.cn/images/swimmingliu_icon.png">
@@ -106,7 +106,9 @@ python mian.py
 
     </style>
 </noscript>
-<meta property="og:url" content="https://swimmingliu.cn/posts/diary/2023-%E5%9C%B0%E5%A4%A7%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+
++
++<meta property="og:url" content="https://swimmingliu.cn/posts/diary/2023-%E5%9C%B0%E5%A4%A7%E6%9C%8D%E5%8A%A1%E5%99%A8/">
   <meta property="og:site_name" content="SwimmingLiu&#39;s Blog">
   <meta property="og:title" content="地大服务器使用教程">
   <meta property="og:description" content="地大服务器使用教程 1. 服务器环境介绍 NVIDIA RTX 3090 (24GB) NVIDIA RTX 2080 Ti (11GB) 2. 配置实验环境 2.1 Conda环境安装 每位同学都会分配个人用户，大家在自己的用户上使用Conda进行环境配置。
@@ -118,7 +120,7 @@ Conda安装教程：https://blog.csdn.net/JineD/article/details/129507719
 ​	https://zhuanlan.zhihu.com/p/461488682
 2.4 开始实验 在算法中指定数据集的存放路径 （相对/绝对路径均可）
 初始化算法的参数
-batch-size 批处理大小：每一次处理图片的个数，根据显卡内存进行调整 epochs	迭代次数：算法总共需要训练的轮次 workers 载入数据进程数：每一次调用多少个进程来载入数据 device 选择显卡设备： &#39;0&#39;使用3090，&#39;1&#39;使用2080ti，&#39;0,1&#39;使用两张卡 开始训练 # 运行训练代码 python mian.py (注：使用向日葵的同学，可以直接在Pycharm当中运行)">
+batch-size 批处理大小：每一次处理图片的个数，根据显卡内存进行调整epochs	迭代次数：算法总共需要训练的轮次workers 载入数据进程数：每一次调用多少个进程来载入数据device 选择显卡设备： &#39;0&#39;使用3090，&#39;1&#39;使用2080ti，&#39;0,1&#39;使用两张卡 开始训练 # 运行训练代码 python mian.py (注：使用向日葵的同学，可以直接在Pycharm当中运行)">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -126,7 +128,8 @@ batch-size 批处理大小：每一次处理图片的个数，根据显卡内存
     <meta property="article:modified_time" content="2023-11-20T12:25:57+08:00">
     <meta property="article:tag" content="CUG">
       <meta property="og:image" content="https://swimmingliu.cn/papermod-cover.png">
-<meta name="twitter:card" content="summary_large_image">
+
++<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://swimmingliu.cn/papermod-cover.png">
 <meta name="twitter:title" content="地大服务器使用教程">
 <meta name="twitter:description" content="地大服务器使用教程
@@ -181,6 +184,7 @@ device      选择显卡设备： &#39;0&#39;使用3090，&#39;1&#39;使用2080t
 python mian.py
 (注：使用向日葵的同学，可以直接在Pycharm当中运行)">
 
++
 
 <script type="application/ld+json">
 {
@@ -214,11 +218,11 @@ python mian.py
   "@type": "BlogPosting",
   "headline": "地大服务器使用教程",
   "name": "地大服务器使用教程",
-  "description": "地大服务器使用教程 1. 服务器环境介绍 NVIDIA RTX 3090 (24GB) NVIDIA RTX 2080 Ti (11GB) 2. 配置实验环境 2.1 Conda环境安装 每位同学都会分配个人用户，大家在自己的用户上使用Conda进行环境配置。\nConda安装教程：https://blog.csdn.net/JineD/article/details/129507719\n大家按照教程步骤安装即可, 由于安装时间较长, 视频中暂不进行演示。\n2.2 Conda环境配置 （以YOLOv8为例） # 创建conda环境 名为yolov8_lyj python版本为3.9 conda create -n yolov8_lyj python=3.9 # 激活环境 conda activate yolov8_lyj # 选择合适的路径，克隆github项目代码 git clone https://github.com/ultralytics/ultralytics # 进入到项目路径下 cd ultralytics/ # 安装相关依赖包 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple 2.3 准备数据集 下载需要训练的数据集 （最好找顶刊/顶会论文中的公开数据集）\n按照算法指定的数据集格式，对数据集格式进行调整。\n​\t目标检测中数据集格式之间的相互转换：（VOC、COCO、YOLO格式）\n​\thttps://zhuanlan.zhihu.com/p/461488682\n2.4 开始实验 在算法中指定数据集的存放路径 （相对/绝对路径均可）\n初始化算法的参数\nbatch-size 批处理大小：每一次处理图片的个数，根据显卡内存进行调整 epochs\t迭代次数：算法总共需要训练的轮次 workers 载入数据进程数：每一次调用多少个进程来载入数据 device 选择显卡设备： \u0026#39;0\u0026#39;使用3090，\u0026#39;1\u0026#39;使用2080ti，\u0026#39;0,1\u0026#39;使用两张卡 开始训练 # 运行训练代码 python mian.py (注：使用向日葵的同学，可以直接在Pycharm当中运行)\n",
+  "description": "地大服务器使用教程 1. 服务器环境介绍 NVIDIA RTX 3090 (24GB) NVIDIA RTX 2080 Ti (11GB) 2. 配置实验环境 2.1 Conda环境安装 每位同学都会分配个人用户，大家在自己的用户上使用Conda进行环境配置。\nConda安装教程：https://blog.csdn.net/JineD/article/details/129507719\n大家按照教程步骤安装即可, 由于安装时间较长, 视频中暂不进行演示。\n2.2 Conda环境配置 （以YOLOv8为例） # 创建conda环境 名为yolov8_lyj python版本为3.9 conda create -n yolov8_lyj python=3.9 # 激活环境 conda activate yolov8_lyj # 选择合适的路径，克隆github项目代码 git clone https://github.com/ultralytics/ultralytics # 进入到项目路径下 cd ultralytics/ # 安装相关依赖包 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple 2.3 准备数据集 下载需要训练的数据集 （最好找顶刊/顶会论文中的公开数据集）\n按照算法指定的数据集格式，对数据集格式进行调整。\n​\t目标检测中数据集格式之间的相互转换：（VOC、COCO、YOLO格式）\n​\thttps://zhuanlan.zhihu.com/p/461488682\n2.4 开始实验 在算法中指定数据集的存放路径 （相对/绝对路径均可）\n初始化算法的参数\nbatch-size 批处理大小：每一次处理图片的个数，根据显卡内存进行调整\repochs\t迭代次数：算法总共需要训练的轮次\rworkers 载入数据进程数：每一次调用多少个进程来载入数据\rdevice 选择显卡设备： \u0026#39;0\u0026#39;使用3090，\u0026#39;1\u0026#39;使用2080ti，\u0026#39;0,1\u0026#39;使用两张卡 开始训练 # 运行训练代码 python mian.py (注：使用向日葵的同学，可以直接在Pycharm当中运行)\n",
   "keywords": [
     "CUG"
   ],
-  "articleBody": "地大服务器使用教程 1. 服务器环境介绍 NVIDIA RTX 3090 (24GB) NVIDIA RTX 2080 Ti (11GB) 2. 配置实验环境 2.1 Conda环境安装 每位同学都会分配个人用户，大家在自己的用户上使用Conda进行环境配置。\nConda安装教程：https://blog.csdn.net/JineD/article/details/129507719\n大家按照教程步骤安装即可, 由于安装时间较长, 视频中暂不进行演示。\n2.2 Conda环境配置 （以YOLOv8为例） # 创建conda环境 名为yolov8_lyj python版本为3.9 conda create -n yolov8_lyj python=3.9 # 激活环境 conda activate yolov8_lyj # 选择合适的路径，克隆github项目代码 git clone https://github.com/ultralytics/ultralytics # 进入到项目路径下 cd ultralytics/ # 安装相关依赖包 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple 2.3 准备数据集 下载需要训练的数据集 （最好找顶刊/顶会论文中的公开数据集）\n按照算法指定的数据集格式，对数据集格式进行调整。\n​\t目标检测中数据集格式之间的相互转换：（VOC、COCO、YOLO格式）\n​\thttps://zhuanlan.zhihu.com/p/461488682\n2.4 开始实验 在算法中指定数据集的存放路径 （相对/绝对路径均可）\n初始化算法的参数\nbatch-size 批处理大小：每一次处理图片的个数，根据显卡内存进行调整 epochs\t迭代次数：算法总共需要训练的轮次 workers 载入数据进程数：每一次调用多少个进程来载入数据 device 选择显卡设备： '0'使用3090，'1'使用2080ti，'0,1'使用两张卡 开始训练 # 运行训练代码 python mian.py (注：使用向日葵的同学，可以直接在Pycharm当中运行)\n3. 注意事项 1. 查看显卡使用情况 两种办法：\n# 第一种 使用nivida驱动直接查看 nvidia-smi # 第二种 使用第三方库 gpustat动态查看 # 先安装第三方库 pip install gpustat -i https://pypi.tuna.tsinghua.edu.cn/simple # 每两秒刷新一次 动态查看显存使用情况 watch -n2 gpustat 2. Magic Network 使用向日葵的同学，可以使用Magic Network进行github仓库克隆、google网盘数据集下载等\n使用方法：\nexport http_proxy=http://127.0.0.1:7890 export https_proxy=http://127.0.0.1:7890 预祝大家科研顺利，硕果累累，offer拿到手软！！！\n博客地址： SwimmingLiu.cn\n",
+  "articleBody": "地大服务器使用教程 1. 服务器环境介绍 NVIDIA RTX 3090 (24GB) NVIDIA RTX 2080 Ti (11GB) 2. 配置实验环境 2.1 Conda环境安装 每位同学都会分配个人用户，大家在自己的用户上使用Conda进行环境配置。\nConda安装教程：https://blog.csdn.net/JineD/article/details/129507719\n大家按照教程步骤安装即可, 由于安装时间较长, 视频中暂不进行演示。\n2.2 Conda环境配置 （以YOLOv8为例） # 创建conda环境 名为yolov8_lyj python版本为3.9 conda create -n yolov8_lyj python=3.9 # 激活环境 conda activate yolov8_lyj # 选择合适的路径，克隆github项目代码 git clone https://github.com/ultralytics/ultralytics # 进入到项目路径下 cd ultralytics/ # 安装相关依赖包 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple 2.3 准备数据集 下载需要训练的数据集 （最好找顶刊/顶会论文中的公开数据集）\n按照算法指定的数据集格式，对数据集格式进行调整。\n​\t目标检测中数据集格式之间的相互转换：（VOC、COCO、YOLO格式）\n​\thttps://zhuanlan.zhihu.com/p/461488682\n2.4 开始实验 在算法中指定数据集的存放路径 （相对/绝对路径均可）\n初始化算法的参数\nbatch-size 批处理大小：每一次处理图片的个数，根据显卡内存进行调整\repochs\t迭代次数：算法总共需要训练的轮次\rworkers 载入数据进程数：每一次调用多少个进程来载入数据\rdevice 选择显卡设备： '0'使用3090，'1'使用2080ti，'0,1'使用两张卡 开始训练 # 运行训练代码 python mian.py (注：使用向日葵的同学，可以直接在Pycharm当中运行)\n3. 注意事项 1. 查看显卡使用情况 两种办法：\n# 第一种 使用nivida驱动直接查看\rnvidia-smi\r# 第二种 使用第三方库 gpustat动态查看\r# 先安装第三方库\rpip install gpustat -i https://pypi.tuna.tsinghua.edu.cn/simple\r# 每两秒刷新一次 动态查看显存使用情况\rwatch -n2 gpustat 2. Magic Network 使用向日葵的同学，可以使用Magic Network进行github仓库克隆、google网盘数据集下载等\n使用方法：\nexport http_proxy=http://127.0.0.1:7890\rexport https_proxy=http://127.0.0.1:7890 预祝大家科研顺利，硕果累累，offer拿到手软！！！\n博客地址： SwimmingLiu.cn\n",
   "wordCount" : "123",
   "inLanguage": "en",
   "image": "https://swimmingliu.cn/papermod-cover.png","datePublished": "2023-11-20T12:25:57+08:00",
