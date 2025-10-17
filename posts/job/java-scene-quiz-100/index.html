@@ -515,7 +515,8 @@ create table if not exists  t_shard_upload_part(
 <p>相关代码：<a href="https://github.com/SwimmingLiu/JavaSceneQuiz100/tree/main/lesson002">https://github.com/SwimmingLiu/JavaSceneQuiz100/tree/main/lesson002</a></p>
 <blockquote>
 <p>使用线程池批量发送短信，当短信发送完毕之后，记录耗时情况
-<strong>【主要知识点】</strong></p></blockquote>
+<strong>【主要知识点】</strong></p>
+</blockquote>
 <ul>
 <li>CountDownLatch：如果想要等异步线程执行之后，再继续回到原方法中，可以使用CountDownLatch</li>
 <li>Executors：用于创建线程池，重写 <code>executor.execute</code> 中的 <code>Runnable</code> 方法，可实现异步执行线程</li>
@@ -707,7 +708,8 @@ create table if not exists  t_shard_upload_part(
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></div><h2 id="4-semaphore实现接口限流">4. Semaphore实现接口限流<a hidden class="anchor" aria-hidden="true" href="#4-semaphore实现接口限流">#</a></h2>
 <blockquote>
-<p>如果后端服务是单体服务，且只部署在一台服务器上，可以采用 <code>Semaphore</code> 信号量的方式实现简单的接口限流机制</p></blockquote>
+<p>如果后端服务是单体服务，且只部署在一台服务器上，可以采用 <code>Semaphore</code> 信号量的方式实现简单的接口限流机制</p>
+</blockquote>
 <p>相关代码：<a href="https://github.com/SwimmingLiu/JavaSceneQuiz100/tree/main/lesson005">https://github.com/SwimmingLiu/JavaSceneQuiz100/tree/main/lesson005</a></p>
 <p><code>Semaphore</code> : JUC当中对信号量的实现，用于控制同时访问共享资源的线程数量。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TestController</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -753,7 +755,8 @@ create table if not exists  t_shard_upload_part(
 <li>商品描述信息（可能是富文本，放在单独的表中）</li>
 <li>商品收藏量</li>
 <li>商品评论量</li>
-</ul></blockquote>
+</ul>
+</blockquote>
 <p>相关代码：<a href="https://github.com/SwimmingLiu/JavaSceneQuiz100/tree/main/lesson006">https://github.com/SwimmingLiu/JavaSceneQuiz100/tree/main/lesson006</a></p>
 <h3 id="51--常规做法">5.1  常规做法<a hidden class="anchor" aria-hidden="true" href="#51--常规做法">#</a></h3>
 <p>按照商品 <code>id</code> 分别查询不同的数据库，在JVM内存中对结果进行组装。</p>
@@ -793,7 +796,8 @@ create table if not exists  t_shard_upload_part(
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></div><h3 id="52-使用线程池并行查询商品信息">5.2 使用线程池并行查询商品信息<a hidden class="anchor" aria-hidden="true" href="#52-使用线程池并行查询商品信息">#</a></h3>
 <blockquote>
-<p>分析：上方的4个商品信息查询之间并没有任何依赖，这些没有依赖的查询其实是可以并行查询的。所以可以使用线程池同时去拿这4个结果，然后在JVM内存中进行组装</p></blockquote>
+<p>分析：上方的4个商品信息查询之间并没有任何依赖，这些没有依赖的查询其实是可以并行查询的。所以可以使用线程池同时去拿这4个结果，然后在JVM内存中进行组装</p>
+</blockquote>
 <p>【主要知识点】</p>
 <ul>
 <li>
@@ -966,7 +970,8 @@ create table if not exists  t_shard_upload_part(
 <li>
 <p>减少队列数至 <code>0</code>：这样任务就不会进入队列，而直接创建新的线程去执行，或者走拒绝策略</p>
 <blockquote>
-<p><code>LinkedBlockingQueue、ArrayBlockingQueue</code> 容量是不允许为0的，如果需要用到容量为0的队列，则需要使用<strong>同步阻塞队列</strong> <code>SynchronousQueue</code></p></blockquote>
+<p><code>LinkedBlockingQueue、ArrayBlockingQueue</code> 容量是不允许为0的，如果需要用到容量为0的队列，则需要使用<strong>同步阻塞队列</strong> <code>SynchronousQueue</code></p>
+</blockquote>
 </li>
 </ul>
 </li>
@@ -1029,7 +1034,8 @@ create table if not exists  t_shard_upload_part(
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></div><h2 id="7-接口性能调优之大-长-事务优化">7. 接口性能调优之大 (长) 事务优化<a hidden class="anchor" aria-hidden="true" href="#7-接口性能调优之大-长-事务优化">#</a></h2>
 <blockquote>
-<p>日常编程中，容易遇到事务执行时间较长的情况。如果该事务的对应的接口，请求量暴增，由于数据库连接池的限制，大部分请求可能会失败。</p></blockquote>
+<p>日常编程中，容易遇到事务执行时间较长的情况。如果该事务的对应的接口，请求量暴增，由于数据库连接池的限制，大部分请求可能会失败。</p>
+</blockquote>
 <p>相关代码：<a href="https://github.com/SwimmingLiu/JavaSceneQuiz100/tree/main/lesson009">https://github.com/SwimmingLiu/JavaSceneQuiz100/tree/main/lesson009</a></p>
 <h3 id="71-大长事务所带来的问题">7.1 大(长)事务所带来的问题<a hidden class="anchor" aria-hidden="true" href="#71-大长事务所带来的问题">#</a></h3>
 <p>下面的代码带有 <code>@Transcational</code> 注解， 说明该方法会交给 <code>Spring</code> 来管理该方法的事务。具体执行逻辑如下：</p>
@@ -1088,7 +1094,8 @@ create table if not exists  t_shard_upload_part(
 <p>相关代码：<a href="https://github.com/SwimmingLiu/JavaSceneQuiz100/tree/main/lesson009">https://github.com/SwimmingLiu/JavaSceneQuiz100/tree/main/lesson009</a></p>
 <h3 id="81-为什么需要动态线程池">8.1 为什么需要动态线程池<a hidden class="anchor" aria-hidden="true" href="#81-为什么需要动态线程池">#</a></h3>
 <blockquote>
-<p>平时我们在开发中，创建了不少线程池，这些线程池都处于游离状态，不方便管理和监控。无法知道目前系统中有哪些线程池、以及每个线程池当前的一个状态，负载情况等，所以我们可以开发一个线程池管理器来解决这个问题。</p></blockquote>
+<p>平时我们在开发中，创建了不少线程池，这些线程池都处于游离状态，不方便管理和监控。无法知道目前系统中有哪些线程池、以及每个线程池当前的一个状态，负载情况等，所以我们可以开发一个线程池管理器来解决这个问题。</p>
+</blockquote>
 <h3 id="82-线程池管理器">8.2 线程池管理器<a hidden class="anchor" aria-hidden="true" href="#82-线程池管理器">#</a></h3>
 <p>统管系统中所有线程池，负责所有线程池的创建、监控等操作。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ThreadPoolManager</span><span class="w"> </span><span class="p">{</span><span class="w"> 
@@ -1173,7 +1180,8 @@ create table if not exists  t_shard_upload_part(
 <h4 id="832-手动实现动态线程池">8.3.2 手动实现动态线程池<a hidden class="anchor" aria-hidden="true" href="#832-手动实现动态线程池">#</a></h4>
 <blockquote>
 <p>线程池中会用到Java中的阻塞队列 <code>java.util.concurrent.BlockingQueue</code>，目前 jdk中自带几个阻塞队列都不支持动态扩容。
-比如 <code>java.util.concurrent.LinkedBlockingQueue</code>，它的 <code>capacity</code> 是 <code>final</code> 修饰的，不支持修改。</p></blockquote>
+比如 <code>java.util.concurrent.LinkedBlockingQueue</code>，它的 <code>capacity</code> 是 <code>final</code> 修饰的，不支持修改。</p>
+</blockquote>
 <p><strong>动态调整大小的前提</strong>：动态调整线程池大小需要队列容量能够支持调整，我们需要创建可扩容的阻塞队列 <code>ResizeLinkedBlockingQueue</code>。代码是从<code>LinkedBlockingQueue</code> 中拷贝过来的，增加可修改容量 的<code>setCapacity</code> 方法。然后创建线程池的时，使用自定义的阻塞队列便可以实现线程池的动态扩容。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="cm">/**
 </span></span></span><span class="line"><span class="cl"><span class="cm"> * 设置容量

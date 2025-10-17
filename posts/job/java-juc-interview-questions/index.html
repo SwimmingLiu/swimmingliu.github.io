@@ -899,7 +899,8 @@ write 写入：把store操作从工作内存中得到的变量值放入主内存
 <li>固定大小线程池 <code>FiexedThreadPool</code> 和 <code>SingleThreadPool</code>：允许的请求队列长度为 <code>Integer.MAX_VALUE</code>，可能会堆积大量的请求，从而导致 <code>OOM</code> 内存不足</li>
 <li>可缓存线程池 <code>CachedThreadPool</code> 和 定时任务线程池 <code>ScheduledThreadPool</code>： 允许创建线程的数量为 <code>Integer.MAX_VALUE</code>， 可能会创建大量线程，从而导致 <code>OOM</code> 内存不足</li>
 <li>定时任务线程池 <code>ScheduledThreadPool</code> 和 单线程定时任务线程池 <code>SingleScheduledThreadPool</code> :  使用的无界的延迟阻塞队列 <code>DelayedWorkQueue</code> 用来存放后续的线程，任务队列的最大长度为 <code>Integer.MAX_VALUE</code>， 可能会堆积大量的请求，从而导致 <code>OOM</code> 内存不足</li>
-</ol></blockquote>
+</ol>
+</blockquote>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// 固定大小线程池 newFixedThreadPool</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">ExecutorService</span><span class="w"> </span><span class="n">executor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Executors</span><span class="p">.</span><span class="na">newFixedThreadPool</span><span class="p">(</span><span class="n">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// 核心线程数=最大线程数=5</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// 单线程线程池 newSingleThreadExecutor</span><span class="w">

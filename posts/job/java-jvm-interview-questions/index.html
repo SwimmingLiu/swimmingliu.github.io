@@ -425,7 +425,8 @@ JVM 内存当中，运行时数据的区域包含堆、方法区（元空间）�
 <li>
 <p><strong>无法动态调整大小，容易内存溢出</strong>：整个永久代的大小受 <code>JVM</code> 内存大小的限制，而元空间用的是本地内存，元空间的大小和本机可用内存大小相关。虽然元空间还是可能出现内存溢出，但是比原来的几率更小。</p>
 <blockquote>
-<p>可以使用 <code>-XX：MaxMetaspaceSize</code> 标志设置最大元空间大小，默认值为 <code>unlimited</code>，这意味着它只受系统内存的限制。<code>-XX：MetaspaceSize</code> 调整标志定义元空间的初始大小如果未指定此标志，则元空间将根据运行时的应用程序需求动态地重新调整大小。</p></blockquote>
+<p>可以使用 <code>-XX：MaxMetaspaceSize</code> 标志设置最大元空间大小，默认值为 <code>unlimited</code>，这意味着它只受系统内存的限制。<code>-XX：MetaspaceSize</code> 调整标志定义元空间的初始大小如果未指定此标志，则元空间将根据运行时的应用程序需求动态地重新调整大小。</p>
+</blockquote>
 </li>
 <li>
 <p><strong>元空间加载的类更多</strong>：元空间存放的是类的元数据，所以加载类的元数据不再受 <code>MaxPermSize</code>  控制 (永久代的最大阈值) ，而是由系统的实际可用空间来进行控制的，这样加载的类就更多了。</p>
@@ -472,7 +473,8 @@ JVM 内存当中，运行时数据的区域包含堆、方法区（元空间）�
 <p><strong>【直接内存】</strong></p>
 <p>直接内存是一种特殊的内存缓冲区，并不属于 <code>JVM</code> 当中的堆或者方法区，而是通过 <code>JNI</code> （Java Native Interface）<code>Java</code> 本地方法接口的方式在本地内存上直接分配的一块区域。直接内存并不是虚拟机运行时数据区的一部分，也不是虚拟机规范中定义的内存区域，但是这部分内存也被频繁地使用。而且也可能导致 <code>OutOfMemoryError</code> 错误出现。</p>
 <blockquote>
-<p>JDK1.4 中新加入的 NIO（Non-Blocking I/O，也被称为 New I/O），引入了一种基于通道（Channel）与缓存区（Buffer）的 I/O 方式，它可以直接使用 Native 函数库直接分配堆外内存，然后通过一个存储在 Java 堆中的 <code>DirectByteBuffer</code> 对象作为这块内存的引用进行操作。这样就能在一些场景中显著提高性能，因为避免了在 Java 堆和 Native 堆之间来回复制数据。</p></blockquote>
+<p>JDK1.4 中新加入的 NIO（Non-Blocking I/O，也被称为 New I/O），引入了一种基于通道（Channel）与缓存区（Buffer）的 I/O 方式，它可以直接使用 Native 函数库直接分配堆外内存，然后通过一个存储在 Java 堆中的 <code>DirectByteBuffer</code> 对象作为这块内存的引用进行操作。这样就能在一些场景中显著提高性能，因为避免了在 Java 堆和 Native 堆之间来回复制数据。</p>
+</blockquote>
 <h2 id="2-hotspot-对象的创建过程">2. HotSpot 对象的创建过程<a hidden class="anchor" aria-hidden="true" href="#2-hotspot-对象的创建过程">#</a></h2>
 <p>在 <code>HotSpot</code> 虚拟机当中，对象的创建过程如下：</p>
 <ol>

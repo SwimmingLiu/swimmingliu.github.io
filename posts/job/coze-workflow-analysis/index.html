@@ -9,11 +9,14 @@
 <meta name="keywords" content="Java">
 <meta name="description" content="
 工作流可以分为三个大板块：工作流管理 (前后端交互-画布存储)、工作流校验、工作流执行
+
 工作流管理
 
 对于前端来讲，工作流就是一张canvas画布。用户可以在画布中，创建不同功能的节点。
 
+
 节点类型可以分为：开始和结束节点 （默认）、LLM节点、子工作流 (嵌套)、插件 (外部工具-例如MCP、OCR)、业务逻辑节点 (选择、循环、分类、批处理(并发)、变量聚合)、数据库节点(SQL、CRUD)、知识库节点(RAG、增删、变量赋值)、图像处理节点、音视频处理节点、组件(JSON序列化、HTTP请求)、定时触发器节点(定时触发任务)
+
 工作流大体执行流程如下
 graph TD
     subgraph &#34;前端Canvas层&#34;
@@ -150,11 +153,14 @@ graph TD subgraph &#34;前端Canvas层&#34; A[Canvas画布用户可视化配置]
 <meta name="twitter:title" content="Coze工作流分析">
 <meta name="twitter:description" content="
 工作流可以分为三个大板块：工作流管理 (前后端交互-画布存储)、工作流校验、工作流执行
+
 工作流管理
 
 对于前端来讲，工作流就是一张canvas画布。用户可以在画布中，创建不同功能的节点。
 
+
 节点类型可以分为：开始和结束节点 （默认）、LLM节点、子工作流 (嵌套)、插件 (外部工具-例如MCP、OCR)、业务逻辑节点 (选择、循环、分类、批处理(并发)、变量聚合)、数据库节点(SQL、CRUD)、知识库节点(RAG、增删、变量赋值)、图像处理节点、音视频处理节点、组件(JSON序列化、HTTP请求)、定时触发器节点(定时触发任务)
+
 工作流大体执行流程如下
 graph TD
     subgraph &#34;前端Canvas层&#34;
@@ -516,12 +522,15 @@ graph TD
     </details>
 </div>
   <div class="post-content"><blockquote>
-<p>工作流可以分为三个大板块：工作流管理 (前后端交互-画布存储)、工作流校验、工作流执行</p></blockquote>
+<p>工作流可以分为三个大板块：工作流管理 (前后端交互-画布存储)、工作流校验、工作流执行</p>
+</blockquote>
 <h2 id="工作流管理">工作流管理<a hidden class="anchor" aria-hidden="true" href="#工作流管理">#</a></h2>
 <blockquote>
-<p>对于前端来讲，工作流就是一张canvas画布。用户可以在画布中，创建不同功能的节点。</p></blockquote>
+<p>对于前端来讲，工作流就是一张canvas画布。用户可以在画布中，创建不同功能的节点。</p>
+</blockquote>
 <blockquote>
-<p>节点类型可以分为：开始和结束节点 （默认）、LLM节点、子工作流 (嵌套)、插件 (外部工具-例如MCP、OCR)、业务逻辑节点 (选择、循环、分类、批处理(并发)、变量聚合)、数据库节点(SQL、CRUD)、知识库节点(RAG、增删、变量赋值)、图像处理节点、音视频处理节点、组件(JSON序列化、HTTP请求)、定时触发器节点(定时触发任务)</p></blockquote>
+<p>节点类型可以分为：开始和结束节点 （默认）、LLM节点、子工作流 (嵌套)、插件 (外部工具-例如MCP、OCR)、业务逻辑节点 (选择、循环、分类、批处理(并发)、变量聚合)、数据库节点(SQL、CRUD)、知识库节点(RAG、增删、变量赋值)、图像处理节点、音视频处理节点、组件(JSON序列化、HTTP请求)、定时触发器节点(定时触发任务)</p>
+</blockquote>
 <p>工作流大体执行流程如下</p>
 <pre class="mermaid">graph TD
     subgraph "前端Canvas层"
@@ -1406,7 +1415,8 @@ graph TD
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></div><h4 id="116交互节点">1.1.6 交互节点<a hidden class="anchor" aria-hidden="true" href="#116交互节点">#</a></h4>
 <blockquote>
-<p>交互节点就是需要让用户做出反馈的节点</p></blockquote>
+<p>交互节点就是需要让用户做出反馈的节点</p>
+</blockquote>
 <pre class="mermaid">sequenceDiagram
     participant User as 用户
     participant Workflow as 工作流引擎
@@ -2371,7 +2381,8 @@ graph LR
 <h4 id="331工作流执行-调试过程">3.3.1 工作流执行-调试过程<a hidden class="anchor" aria-hidden="true" href="#331工作流执行-调试过程">#</a></h4>
 <h5 id="3311调试过程-执行过程不包含工作流执行过程">3.3.1.1 调试过程-执行过程 （不包含工作流执行过程）<a hidden class="anchor" aria-hidden="true" href="#3311调试过程-执行过程不包含工作流执行过程">#</a></h5>
 <blockquote>
-<p>工作流编辑模式，进行调试，采用异步模式执行。</p></blockquote>
+<p>工作流编辑模式，进行调试，采用异步模式执行。</p>
+</blockquote>
 <pre class="mermaid">sequenceDiagram
     participant Client as 客户端
     participant AS as ApplicationService
@@ -2441,7 +2452,8 @@ graph LR
 
 <h5 id="3312工作流执行过程dag执行流程">3.3.1.2 工作流执行过程 （DAG执行流程）<a hidden class="anchor" aria-hidden="true" href="#3312工作流执行过程dag执行流程">#</a></h5>
 <blockquote>
-<p>eino框架 DAG执行流程</p></blockquote>
+<p>eino框架 DAG执行流程</p>
+</blockquote>
 <p>❶ <strong>执行模式选择阶段</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">var</span><span class="w"> </span><span class="nx">runWrapper</span><span class="w"> </span><span class="nx">runnableCallWrapper</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nx">runWrapper</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">runnableInvoke</span><span class="w">
@@ -2536,7 +2548,8 @@ graph LR
 
 <h5 id="3313dag图中节点队列执行顺序">3.3.1.3 DAG图中节点队列 （执行顺序）<a hidden class="anchor" aria-hidden="true" href="#3313dag图中节点队列执行顺序">#</a></h5>
 <blockquote>
-<p>DAG图中节点执行顺序，如何获取节点队列</p></blockquote>
+<p>DAG图中节点执行顺序，如何获取节点队列</p>
+</blockquote>
 <pre class="mermaid">flowchart TD
     A[开始执行run方法] --> B["声明: var nextTasks []*task"]
     B --> C{是否存在检查点?}
@@ -2575,7 +2588,8 @@ graph LR
 </pre>
 
 <blockquote>
-<p>calculateNextTasks 方法的具体执行流程</p></blockquote>
+<p>calculateNextTasks 方法的具体执行流程</p>
+</blockquote>
 <pre class="mermaid">sequenceDiagram
     participant Caller as 调用方(主循环)
     participant CNT as calculateNextTasks
@@ -2650,7 +2664,8 @@ graph LR
 </pre>
 
 <blockquote>
-<p>流程图</p></blockquote>
+<p>流程图</p>
+</blockquote>
 <pre class="mermaid">flowchart LR
     A[calculateNextTasks开始] --> B[第一阶段：调用resolveCompletedTasks]
     
@@ -2703,7 +2718,8 @@ graph LR
 
 <h5 id="3314超详细执行流程">3.3.1.4 超详细执行流程<a hidden class="anchor" aria-hidden="true" href="#3314超详细执行流程">#</a></h5>
 <blockquote>
-<p>假如现在开始节点(start)连接了 [A，B，C] 三个节点，且B节点还连接了E节点。 另外，[A，E，C] 三个节点都连接 end节点。</p></blockquote>
+<p>假如现在开始节点(start)连接了 [A，B，C] 三个节点，且B节点还连接了E节点。 另外，[A，E，C] 三个节点都连接 end节点。</p>
+</blockquote>
 <pre class="mermaid">sequenceDiagram
     participant Client as "客户端"
     participant Runner as "Runner执行器"

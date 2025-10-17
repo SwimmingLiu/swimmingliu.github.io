@@ -544,7 +544,8 @@ public boolean equals(Object obj) {
 <li>JDK 1.6：运行次数少的情况下，<code>JDK</code>动态代理和<code>CGLIB</code> 基本没差，甚至<code>JDK</code>动态代理更快。当次数增加之后，<code>CGLIB</code> 会稍微快一些</li>
 <li>JDK 1.7: 基本都是 <code>JDK</code>动态代理比较快，运行次数较少的情况下，<code>JDK</code>动态代理比<code>CGLIB</code> 快 <code>30%</code> 左右。当次数增加之后，<code>JDK</code>动态代理比<code>CGLIB</code> 快了接近一倍</li>
 <li>JDK 1.8：和 <code>JDK 1.7</code> 表现基本一致</li>
-</ul></blockquote>
+</ul>
+</blockquote>
 <p><strong>【JDK 动态代理详解】</strong></p>
 <p><code>JDK</code> 动态代理是通过反射机制，来实现代理接口中的方法的。通过 <code>java.lang.reflect.Proxy</code> 类 和 <code>InvocationHandler</code> 接口来实现代理， 代理对象只代理接口中的方法。当调用代理对象的方法的时候，代理类会拦截方法调用，然后通过 <code>InvocationHandler.invoke()</code> 方法执行额外的逻辑。 (<code>AOP</code> 切面编程的原理)</p>
 <p><img alt="JDK动态代理结构图" loading="lazy" src="https://oss.swimmingliu.cn/bd651ce8-0332-11f0-951a-c858c0c1debd"></p>

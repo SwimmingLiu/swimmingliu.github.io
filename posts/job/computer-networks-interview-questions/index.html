@@ -498,7 +498,8 @@ UDP 是一种不可靠的、无连接、基于数据报传输的传输协议，�
 <p><img alt="ISO和TCP_IP协议结构图" loading="lazy" src="https://oss.swimmingliu.cn/9fa1f967-0012-11f0-b03d-c858c0c1deba"></p>
 <p><strong>【TCP 详解】</strong></p>
 <blockquote>
-<p>TCP包没有IP地址，网络层已经处理过了。但是有源端口和目标端口</p></blockquote>
+<p>TCP包没有IP地址，网络层已经处理过了。但是有源端口和目标端口</p>
+</blockquote>
 <ul>
 <li><strong>序列号 (Sequence Number)</strong>：在建立连接的时候，主机生成随机数作为初始值， 经过 <code>SYN</code> 包 (第一次握手)传给接收端主机。每发送一次数据，累加<strong>数据字节数</strong>大小，用来确保传输是按照顺序接受的。</li>
 <li><strong>确认应答号 (Acknowledgement Number)</strong> ：用来表示下一次希望受到的数据序列号，发送端受到确认应答后可认为此序列号前数据已经被正常接受，防止出现<strong>丢包</strong>的情况。</li>
@@ -515,7 +516,8 @@ UDP 是一种不可靠的、无连接、基于数据报传输的传输协议，�
 <p><img alt="TCP头部结构图" loading="lazy" src="https://oss.swimmingliu.cn/a081e157-0012-11f0-924e-c858c0c1deba"></p>
 <p><strong>【TCP 面试题拓展】</strong></p>
 <blockquote>
-<p>有一个IP的服务端监听了一个端口，它的TCP最大连接数目是多少？</p></blockquote>
+<p>有一个IP的服务端监听了一个端口，它的TCP最大连接数目是多少？</p>
+</blockquote>
 <pre tabindex="0"><code class="language-math" data-lang="math">最大TCP连接数 = 客户端IP数 * 客户端的端口数
 </code></pre><p>在 <code>IPv4</code> 当中，客户端的IP数目最多为 <code>2^32</code>, 客户端的端口数最多为 <code>2^16</code>，所以单机的TCP最大连接数为<code>2^48</code>。但是由于文件描述符和内存限制，一般没法儿达到理论上限。</p>
 <p><strong>【UDP 的首部结构】</strong></p>
@@ -914,7 +916,8 @@ UDP 是一种不可靠的、无连接、基于数据报传输的传输协议，�
 <ul>
 <li>RTT: Round Trip Time 往返时间</li>
 <li>RTO: Retransmission Timeout 超时重传时间</li>
-</ul></blockquote>
+</ul>
+</blockquote>
 <ul>
 <li>
 <p><strong>QUIC 协议</strong>：基于UDP协议，QUIC 通过自身实现可靠传输，减少了 <code>RTT</code>。参考材料：<a href="https://xiaolincoding.com/network/3_tcp/quic.html">QUIC如何实现可靠传输</a></p>
