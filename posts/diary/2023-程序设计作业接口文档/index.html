@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en" dir="auto" data-theme="auto">
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -102,12 +102,12 @@ data = {
 ">
 <meta name="author" content="SwimmingLiu">
 <link rel="canonical" href="https://swimmingliu.cn/posts/diary/2023-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%BD%9C%E4%B8%9A%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.6ecbb0040febd20e47edd88a662c19f1ea945bf7427774b86594271d18f88faf.css" integrity="sha256-bsuwBA/r0g5H7diKZiwZ8eqUW/dCd3S4ZZQnHRj4j68=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://swimmingliu.cn/images/swimmingliu_icon.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://swimmingliu.cn/images/swimmingliu_icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://swimmingliu.cn/images/swimmingliu_icon.png">
-<link rel="apple-touch-icon" href="https://swimmingliu.cn/images/swimmingliu_icon.png">
-<link rel="mask-icon" href="https://swimmingliu.cn/images/swimmingliu_icon.png">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a0fc02d530b8a50c21c1761776b2bddbbda4bb72d45c30ebfd02f2df8cf4235d.css" integrity="sha256-oPwC1TC4pQwhwXYXdrK9272ku3LUXDDr/QLy34z0I10=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://oss.swimmingliu.cn/swimmingliu_icon-7772456ede34.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="https://oss.swimmingliu.cn/swimmingliu_icon-7772456ede34.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://oss.swimmingliu.cn/swimmingliu_icon-7772456ede34.jpg">
+<link rel="apple-touch-icon" href="https://oss.swimmingliu.cn/swimmingliu_icon-7772456ede34.jpg">
+<link rel="mask-icon" href="https://oss.swimmingliu.cn/swimmingliu_icon-7772456ede34.jpg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <link rel="alternate" hreflang="en" href="https://swimmingliu.cn/posts/diary/2023-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%BD%9C%E4%B8%9A%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/">
@@ -131,28 +131,36 @@ data = {
                 --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
+                color-scheme: dark;
             }
 
             .list {
                 background: var(--theme);
             }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
+            .toc {
+                background: var(--entry);
             }
         }
 
     </style>
 </noscript>
-<meta property="og:url" content="https://swimmingliu.cn/posts/diary/2023-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%BD%9C%E4%B8%9A%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://swimmingliu.cn/posts/diary/2023-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%BD%9C%E4%B8%9A%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/">
   <meta property="og:site_name" content="SwimmingLiu&#39;s Blog">
   <meta property="og:title" content="程序设计作业接口文档">
   <meta property="og:description" content="程序设计作业接口文档 统一返回格式
-{ code: ...,	# 状态码 msg: ...,	# 描述信息 data: { # 数据 ... } } code = { 200 == 成功, 500 == 失败, } msg = { success == 成功 fail == 失败 ... } data = { key : value } 前端 虚拟换衣功能 @请求格式 （请求后端） # 前后端需统一样例图片id { userId: ...&lt;int&gt;,	# 标识哪个用户的请求 isUploadCloth: ...&lt;bool&gt;, # 若上传衣服图片使用base64，否则用id isUploadPerson: ...&lt;bool&gt;, # 若上传人物图片使用base64，否则用id clothData: ...&lt;base64||null&gt;, # 衣服图片base64编码 personData: ...&lt;base64||null&gt;,	# 人物图片base64编码 exampleClothId: ...&lt;int&gt;,	# 衣服样例图片id examplePersonId: ...&lt;int&gt;	# 任务样例图片id } 动漫头像功能 @请求格式 （请求后端） { userId: ...&lt;int&gt;, # 标识哪个用户的请求 imgData: ...&lt;base64&gt; # 需要动漫化的图片 } 后端 虚拟换衣功能 前端请求API: https://talented-civet-separately.ngrok-free.app/tryon/ @返回格式 (返回前端) { code: ...&lt;int&gt;, # 状态码 (200表示成功, 500表示失败) msg: ...&lt;string&gt;,	# 消息 (success / fail) data: { tryon_result : ...&lt;url&gt;, # 处理后的图片url } } 动漫头像功能 前端请求API: https://talented-civet-separately.ngrok-free.app/anime/ @返回格式 (返回前端) { code: ...&lt;int&gt;, # 状态码 (200表示成功, 500表示失败) msg : ...&lt;string&gt;, # 消息 (success / fail) data: { anime_result : ...&lt;url&gt;, # 处理后的图片url } } 模型端 虚拟换衣功能 后端请求API: https://certain-ideally-foal.ngrok-free.app/tryon/predict/ @请求格式	(后端发出请求) { userid : ...&lt;int&gt;, # 用户id cloth : ...&lt;url&gt;, # 衣服图片url链接 person : ...&lt;url&gt;	# 人物图片url链接 } @返回格式	（返回后端） { code: ...&lt;int&gt;, # 状态码 (200表示成功, 500表示失败) msg: ...&lt;string&gt;,	# 消息 (success / fail) data: { image_value : ...&lt;base64&gt;, # 处理后的图片base64编码 } } 动漫头像功能 后端请求API: https://certain-ideally-foal.ngrok-free.app/anime/predict/ @请求格式 { userid : ...&lt;int&gt;, # 用户id origin_image : ...&lt;url&gt;, # 原图片url链接 } @返回格式 { code: ...&lt;int&gt;, # 状态码 (200表示成功, 500表示失败) msg: ...&lt;string&gt;,	# 消息 (success / fail) data: { image_value : ...&lt;base64&gt;, # 处理后的图片base64编码 } } ">
+{ code: ...,	# 状态码 msg: ...,	# 描述信息 data: { # 数据 ... } } code = { 200 == 成功, 500 == 失败, } msg = { success == 成功 fail == 失败 ... } data = { key : value } 前端 虚拟换衣功能 @请求格式 （请求后端） # 前后端需统一样例图片id { userId: ...&lt;int&gt;,	# 标识哪个用户的请求 isUploadCloth: ...&lt;bool&gt;, # 若上传衣服图片使用base64，否则用id isUploadPerson: ...&lt;bool&gt;, # 若上传人物图片使用base64，否则用id clothData: ...&lt;base64||null&gt;, # 衣服图片base64编码 personData: ...&lt;base64||null&gt;,	# 人物图片base64编码 exampleClothId: ...&lt;int&gt;,	# 衣服样例图片id examplePersonId: ...&lt;int&gt;	# 任务样例图片id } 动漫头像功能 @请求格式 （请求后端） { userId: ...&lt;int&gt;, # 标识哪个用户的请求 imgData: ...&lt;base64&gt; # 需要动漫化的图片 } 后端 虚拟换衣功能 前端请求API: https://talented-civet-separately.ngrok-free.app/tryon/ @返回格式 (返回前端) { code: ...&lt;int&gt;, # 状态码 (200表示成功, 500表示失败) msg: ...&lt;string&gt;,	# 消息 (success / fail) data: { tryon_result : ...&lt;url&gt;, # 处理后的图片url } } 动漫头像功能 前端请求API: https://talented-civet-separately.ngrok-free.app/anime/ @返回格式 (返回前端) { code: ...&lt;int&gt;, # 状态码 (200表示成功, 500表示失败) msg : ...&lt;string&gt;, # 消息 (success / fail) data: { anime_result : ...&lt;url&gt;, # 处理后的图片url } } 模型端 虚拟换衣功能 后端请求API: https://certain-ideally-foal.ngrok-free.app/tryon/predict/ @请求格式	(后端发出请求) { userid : ...&lt;int&gt;, # 用户id cloth : ...&lt;url&gt;, # 衣服图片url链接 person : ...&lt;url&gt;	# 人物图片url链接 } @返回格式	（返回后端） { code: ...&lt;int&gt;, # 状态码 (200表示成功, 500表示失败) msg: ...&lt;string&gt;,	# 消息 (success / fail) data: { image_value : ...&lt;base64&gt;, # 处理后的图片base64编码 } } 动漫头像功能 后端请求API: https://certain-ideally-foal.ngrok-free.app/anime/predict/ @请求格式 { userid : ...&lt;int&gt;, # 用户id origin_image : ...&lt;url&gt;, # 原图片url链接 } @返回格式 { code: ...&lt;int&gt;, # 状态码 (200表示成功, 500表示失败) msg: ...&lt;string&gt;,	# 消息 (success / fail) data: { image_value : ...&lt;base64&gt;, # 处理后的图片base64编码 } }">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -160,102 +168,12 @@ data = {
     <meta property="article:modified_time" content="2023-12-02T21:40:07+08:00">
     <meta property="article:tag" content="程序设计作业">
       <meta property="og:image" content="https://swimmingliu.cn/papermod-cover.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://swimmingliu.cn/papermod-cover.png">
-<meta name="twitter:title" content="程序设计作业接口文档">
-<meta name="twitter:description" content="程序设计作业接口文档
-统一返回格式
-{
-    code: ...,	# 状态码
-    msg: ...,	# 描述信息
-    data: {     # 数据
-    	...
-    }
-}
-code = {
-    200 == 成功,
-    500 == 失败,
-}
-msg = {
-    success == 成功
-    fail    == 失败
-    ...
-}
-data = {
-    key : value
-}
-前端
-虚拟换衣功能
-@请求格式  （请求后端）  	 # 前后端需统一样例图片id
-{
-    userId: ...&lt;int&gt;,			# 标识哪个用户的请求
-    isUploadCloth: ...&lt;bool&gt;,           # 若上传衣服图片使用base64，否则用id
-    isUploadPerson: ...&lt;bool&gt;,          # 若上传人物图片使用base64，否则用id
-    clothData: ...&lt;base64||null&gt;, 	# 衣服图片base64编码
-    personData: ...&lt;base64||null&gt;,	# 人物图片base64编码
-    exampleClothId: ...&lt;int&gt;,		# 衣服样例图片id
-    examplePersonId: ...&lt;int&gt;		# 任务样例图片id
-}
-动漫头像功能
-@请求格式 （请求后端）
-{
-    userId: ...&lt;int&gt;,    	        # 标识哪个用户的请求
-    imgData:  ...&lt;base64&gt; 	        # 需要动漫化的图片 
-}
-后端
-虚拟换衣功能
-前端请求API: https://talented-civet-separately.ngrok-free.app/tryon/
-@返回格式 (返回前端)
-{
-    code: ...&lt;int&gt;, 	                # 状态码 (200表示成功, 500表示失败)
-    msg: ...&lt;string&gt;,	                # 消息 (success / fail)
-    data: {
-        tryon_result : ...&lt;url&gt;,  	# 处理后的图片url
-    } 
-}
-动漫头像功能
-前端请求API: https://talented-civet-separately.ngrok-free.app/anime/
-@返回格式 (返回前端)
-{
-    code: ...&lt;int&gt;,  	                # 状态码 (200表示成功, 500表示失败)
-    msg : ...&lt;string&gt;, 	                # 消息 (success / fail)
-    data: {
-    	anime_result :  ...&lt;url&gt;, 	# 处理后的图片url
-    }
-}
-模型端
-虚拟换衣功能
-后端请求API: https://certain-ideally-foal.ngrok-free.app/tryon/predict/
-@请求格式	(后端发出请求)
-{
-    userid : ...&lt;int&gt;,              # 用户id
-    cloth  : ...&lt;url&gt;, 	            # 衣服图片url链接
-    person : ...&lt;url&gt;	            # 人物图片url链接
-}
-@返回格式	（返回后端）
-{
-    code: ...&lt;int&gt;, 	            # 状态码 (200表示成功, 500表示失败)
-    msg: ...&lt;string&gt;,	            # 消息 (success / fail)
-    data: {
-        image_value : ...&lt;base64&gt;,  # 处理后的图片base64编码
-    } 
-}
-动漫头像功能
-后端请求API: https://certain-ideally-foal.ngrok-free.app/anime/predict/
-@请求格式
-{
-    userid : ...&lt;int&gt;,  	   # 用户id
-    origin_image  : ...&lt;url&gt;, 	   # 原图片url链接 
-}
-@返回格式
-{
-    code: ...&lt;int&gt;, 	            # 状态码 (200表示成功, 500表示失败)
-    msg: ...&lt;string&gt;,	            # 消息 (success / fail)
-    data: {
-        image_value : ...&lt;base64&gt;,  # 处理后的图片base64编码
-    } 
-}
-">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://swimmingliu.cn/papermod-cover.png">
+  <meta name="twitter:title" content="程序设计作业接口文档">
+  <meta name="twitter:description" content="程序设计作业接口文档 统一返回格式
+{ code: ...,	# 状态码 msg: ...,	# 描述信息 data: { # 数据 ... } } code = { 200 == 成功, 500 == 失败, } msg = { success == 成功 fail == 失败 ... } data = { key : value } 前端 虚拟换衣功能 @请求格式 （请求后端） # 前后端需统一样例图片id { userId: ...&lt;int&gt;,	# 标识哪个用户的请求 isUploadCloth: ...&lt;bool&gt;, # 若上传衣服图片使用base64，否则用id isUploadPerson: ...&lt;bool&gt;, # 若上传人物图片使用base64，否则用id clothData: ...&lt;base64||null&gt;, # 衣服图片base64编码 personData: ...&lt;base64||null&gt;,	# 人物图片base64编码 exampleClothId: ...&lt;int&gt;,	# 衣服样例图片id examplePersonId: ...&lt;int&gt;	# 任务样例图片id } 动漫头像功能 @请求格式 （请求后端） { userId: ...&lt;int&gt;, # 标识哪个用户的请求 imgData: ...&lt;base64&gt; # 需要动漫化的图片 } 后端 虚拟换衣功能 前端请求API: https://talented-civet-separately.ngrok-free.app/tryon/ @返回格式 (返回前端) { code: ...&lt;int&gt;, # 状态码 (200表示成功, 500表示失败) msg: ...&lt;string&gt;,	# 消息 (success / fail) data: { tryon_result : ...&lt;url&gt;, # 处理后的图片url } } 动漫头像功能 前端请求API: https://talented-civet-separately.ngrok-free.app/anime/ @返回格式 (返回前端) { code: ...&lt;int&gt;, # 状态码 (200表示成功, 500表示失败) msg : ...&lt;string&gt;, # 消息 (success / fail) data: { anime_result : ...&lt;url&gt;, # 处理后的图片url } } 模型端 虚拟换衣功能 后端请求API: https://certain-ideally-foal.ngrok-free.app/tryon/predict/ @请求格式	(后端发出请求) { userid : ...&lt;int&gt;, # 用户id cloth : ...&lt;url&gt;, # 衣服图片url链接 person : ...&lt;url&gt;	# 人物图片url链接 } @返回格式	（返回后端） { code: ...&lt;int&gt;, # 状态码 (200表示成功, 500表示失败) msg: ...&lt;string&gt;,	# 消息 (success / fail) data: { image_value : ...&lt;base64&gt;, # 处理后的图片base64编码 } } 动漫头像功能 后端请求API: https://certain-ideally-foal.ngrok-free.app/anime/predict/ @请求格式 { userid : ...&lt;int&gt;, # 用户id origin_image : ...&lt;url&gt;, # 原图片url链接 } @返回格式 { code: ...&lt;int&gt;, # 状态码 (200表示成功, 500表示失败) msg: ...&lt;string&gt;,	# 消息 (success / fail) data: { image_value : ...&lt;base64&gt;, # 处理后的图片base64编码 } }">
 
 
 <script type="application/ld+json">
@@ -312,39 +230,27 @@ data = {
     "name": "SwimmingLiu's Blog",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://swimmingliu.cn/images/swimmingliu_icon.png"
+      "url": "https://oss.swimmingliu.cn/swimmingliu_icon-7772456ede34.jpg"
     }
   }
 }
 </script>
 </head>
-
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
         <div class="logo">
             <a href="https://swimmingliu.cn/" accesskey="h" title="𝓢𝔀𝓲𝓶𝓶𝓲𝓷𝓰𝓛𝓲𝓾&#39;𝓼 𝓑𝓵𝓸𝓰 (Alt + H)">
-                <img src="https://swimmingliu.cn/images/swimmingliu_icon.png" alt="" aria-label="logo"
+                <img src="https://oss.swimmingliu.cn/swimmingliu_icon-7772456ede34.jpg" alt="" aria-label="logo"
                     height="30">𝓢𝔀𝓲𝓶𝓶𝓲𝓷𝓰𝓛𝓲𝓾&#39;𝓼 𝓑𝓵𝓸𝓰</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -360,7 +266,7 @@ data = {
                 </button>
             </div>
         </div>
-        <ul id="menu">
+        <ul id="menu" class="menu">
             <li>
                 <a href="https://swimmingliu.cn/index.html" title="🏡 Home">
                     <span>🏡 Home</span>
@@ -387,19 +293,8 @@ data = {
                 </a>
             </li>
             <li>
-                <a href="https://bento.me/swimmingliu" title="👨🏻‍🎓 About Me">
+                <a href="https://avely.me/swimmingliu" title="👨🏻‍🎓 About Me">
                     <span>👨🏻‍🎓 About Me</span>&nbsp;
-                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
-                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                        <path d="M15 3h6v6"></path>
-                        <path d="M10 14L21 3"></path>
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.emojisearch.app/" title="Emoji">
-                    <span>Emoji</span>&nbsp;
                     <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
                         stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
                         <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
@@ -415,56 +310,73 @@ data = {
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://swimmingliu.cn/">Home</a>&nbsp;»&nbsp;<a href="https://swimmingliu.cn/posts/">📚 Posts</a>&nbsp;»&nbsp;<a href="https://swimmingliu.cn/posts/diary/">📓 Diary</a></div>
+    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="/posts/">📚 Posts</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="/posts/diary/">📓 Diary</a>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+</nav>
     <h1 class="post-title entry-hint-parent">
       程序设计作业接口文档
     </h1>
-    <div class="post-meta"><span title='2023-12-02 21:40:07 +0800 +0800'>December 2, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;SwimmingLiu
+    <div class="post-meta">
+
+<span title='2023-12-02 21:40:07 +0800 +0800'>December 2, 2023</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span>
 
 </div>
-  </header> <div class="toc">
-    <details >
-        <summary accesskey="c" title="(Alt + C)">
-            <span class="details">Table of Contents</span>
-        </summary>
+  </header> <details class="toc" >
+    <summary accesskey="c" title="(Alt + C)">
+        <span class="title">Table of Contents</span>
+    </summary>
 
-        <div class="inner"><ul>
-                <li>
-                    <a href="#%e7%a8%8b%e5%ba%8f%e8%ae%be%e8%ae%a1%e4%bd%9c%e4%b8%9a%e6%8e%a5%e5%8f%a3%e6%96%87%e6%a1%a3" aria-label="程序设计作业接口文档">程序设计作业接口文档</a><ul>
-                        
-                <li>
-                    <a href="#%e5%89%8d%e7%ab%af" aria-label="前端">前端</a><ul>
-                        
-                <li>
-                    <a href="#%e8%99%9a%e6%8b%9f%e6%8d%a2%e8%a1%a3%e5%8a%9f%e8%83%bd" aria-label="虚拟换衣功能">虚拟换衣功能</a></li>
-                <li>
-                    <a href="#%e5%8a%a8%e6%bc%ab%e5%a4%b4%e5%83%8f%e5%8a%9f%e8%83%bd" aria-label="动漫头像功能">动漫头像功能</a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e5%90%8e%e7%ab%af" aria-label="后端">后端</a><ul>
-                        
-                <li>
-                    <a href="#%e8%99%9a%e6%8b%9f%e6%8d%a2%e8%a1%a3%e5%8a%9f%e8%83%bd-1" aria-label="虚拟换衣功能">虚拟换衣功能</a></li>
-                <li>
-                    <a href="#%e5%8a%a8%e6%bc%ab%e5%a4%b4%e5%83%8f%e5%8a%9f%e8%83%bd-1" aria-label="动漫头像功能">动漫头像功能</a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e6%a8%a1%e5%9e%8b%e7%ab%af" aria-label="模型端">模型端</a><ul>
-                        
-                <li>
-                    <a href="#%e8%99%9a%e6%8b%9f%e6%8d%a2%e8%a1%a3%e5%8a%9f%e8%83%bd-2" aria-label="虚拟换衣功能">虚拟换衣功能</a></li>
-                <li>
-                    <a href="#%e5%8a%a8%e6%bc%ab%e5%a4%b4%e5%83%8f%e5%8a%9f%e8%83%bd-2" aria-label="动漫头像功能">动漫头像功能</a>
-                </li>
-            </ul>
+    <div class="inner"><ul>
+            <li>
+                <a href="#%e7%a8%8b%e5%ba%8f%e8%ae%be%e8%ae%a1%e4%bd%9c%e4%b8%9a%e6%8e%a5%e5%8f%a3%e6%96%87%e6%a1%a3" aria-label="程序设计作业接口文档">程序设计作业接口文档</a><ul>
+                    
+            <li>
+                <a href="#%e5%89%8d%e7%ab%af" aria-label="前端">前端</a><ul>
+                    
+            <li>
+                <a href="#%e8%99%9a%e6%8b%9f%e6%8d%a2%e8%a1%a3%e5%8a%9f%e8%83%bd" aria-label="虚拟换衣功能">虚拟换衣功能</a></li>
+            <li>
+                <a href="#%e5%8a%a8%e6%bc%ab%e5%a4%b4%e5%83%8f%e5%8a%9f%e8%83%bd" aria-label="动漫头像功能">动漫头像功能</a></li></ul>
             </li>
-            </ul>
+            <li>
+                <a href="#%e5%90%8e%e7%ab%af" aria-label="后端">后端</a><ul>
+                    
+            <li>
+                <a href="#%e8%99%9a%e6%8b%9f%e6%8d%a2%e8%a1%a3%e5%8a%9f%e8%83%bd-1" aria-label="虚拟换衣功能">虚拟换衣功能</a></li>
+            <li>
+                <a href="#%e5%8a%a8%e6%bc%ab%e5%a4%b4%e5%83%8f%e5%8a%9f%e8%83%bd-1" aria-label="动漫头像功能">动漫头像功能</a></li></ul>
             </li>
-            </ul>
-        </div>
-    </details>
-</div>
-  <div class="post-content"><h1 id="程序设计作业接口文档">程序设计作业接口文档<a hidden class="anchor" aria-hidden="true" href="#程序设计作业接口文档">#</a></h1>
+            <li>
+                <a href="#%e6%a8%a1%e5%9e%8b%e7%ab%af" aria-label="模型端">模型端</a><ul>
+                    
+            <li>
+                <a href="#%e8%99%9a%e6%8b%9f%e6%8d%a2%e8%a1%a3%e5%8a%9f%e8%83%bd-2" aria-label="虚拟换衣功能">虚拟换衣功能</a></li>
+            <li>
+                <a href="#%e5%8a%a8%e6%bc%ab%e5%a4%b4%e5%83%8f%e5%8a%9f%e8%83%bd-2" aria-label="动漫头像功能">动漫头像功能</a>
+            </li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        </ul>
+    </div>
+</details>
+
+  <div class="post-content md-content"><h1 id="程序设计作业接口文档">程序设计作业接口文档<a hidden class="anchor" aria-hidden="true" href="#程序设计作业接口文档">#</a></h1>
 <p>统一返回格式</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="err">code:</span> <span class="err">...,</span>	<span class="err">#</span> <span class="err">状态码</span>
@@ -506,7 +418,7 @@ data = {
 </span></span></code></pre></div><h2 id="后端">后端<a hidden class="anchor" aria-hidden="true" href="#后端">#</a></h2>
 <h3 id="虚拟换衣功能-1">虚拟换衣功能<a hidden class="anchor" aria-hidden="true" href="#虚拟换衣功能-1">#</a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">前端请求API:</span> <span class="err">https:</span><span class="c1">//talented-civet-separately.ngrok-free.app/tryon/
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">@返回格式</span> <span class="err">(返回前端)</span>
+</span></span></span><span class="line"><span class="cl"><span class="err">@返回格式</span> <span class="err">(返回前端)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="err">code:</span> <span class="err">...&lt;int&gt;,</span> 	                <span class="err">#</span> <span class="err">状态码</span> <span class="err">(200表示成功,</span> <span class="err">500表示失败)</span>
 </span></span><span class="line"><span class="cl">    <span class="err">msg:</span> <span class="err">...&lt;string&gt;,</span>	                <span class="err">#</span> <span class="err">消息</span> <span class="err">(success</span> <span class="err">/</span> <span class="err">fail)</span>
@@ -516,7 +428,7 @@ data = {
 </span></span><span class="line"><span class="cl"><span class="err">}</span>
 </span></span></code></pre></div><h3 id="动漫头像功能-1">动漫头像功能<a hidden class="anchor" aria-hidden="true" href="#动漫头像功能-1">#</a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">前端请求API:</span> <span class="err">https:</span><span class="c1">//talented-civet-separately.ngrok-free.app/anime/
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">@返回格式</span> <span class="err">(返回前端)</span>
+</span></span></span><span class="line"><span class="cl"><span class="err">@返回格式</span> <span class="err">(返回前端)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="err">code:</span> <span class="err">...&lt;int&gt;,</span>  	                <span class="err">#</span> <span class="err">状态码</span> <span class="err">(200表示成功,</span> <span class="err">500表示失败)</span>
 </span></span><span class="line"><span class="cl">    <span class="err">msg</span> <span class="err">:</span> <span class="err">...&lt;string&gt;,</span> 	                <span class="err">#</span> <span class="err">消息</span> <span class="err">(success</span> <span class="err">/</span> <span class="err">fail)</span>
@@ -527,7 +439,7 @@ data = {
 </span></span></code></pre></div><h2 id="模型端">模型端<a hidden class="anchor" aria-hidden="true" href="#模型端">#</a></h2>
 <h3 id="虚拟换衣功能-2">虚拟换衣功能<a hidden class="anchor" aria-hidden="true" href="#虚拟换衣功能-2">#</a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">后端请求API:</span> <span class="err">https:</span><span class="c1">//certain-ideally-foal.ngrok-free.app/tryon/predict/
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">@请求格式</span>	<span class="err">(后端发出请求)</span>
+</span></span></span><span class="line"><span class="cl"><span class="err">@请求格式</span>	<span class="err">(后端发出请求)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="err">userid</span> <span class="err">:</span> <span class="err">...&lt;int&gt;,</span>              <span class="err">#</span> <span class="err">用户id</span>
 </span></span><span class="line"><span class="cl">    <span class="err">cloth</span>  <span class="err">:</span> <span class="err">...&lt;url&gt;,</span> 	            <span class="err">#</span> <span class="err">衣服图片url链接</span>
@@ -543,7 +455,7 @@ data = {
 </span></span><span class="line"><span class="cl"><span class="err">}</span>
 </span></span></code></pre></div><h3 id="动漫头像功能-2">动漫头像功能<a hidden class="anchor" aria-hidden="true" href="#动漫头像功能-2">#</a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">后端请求API:</span> <span class="err">https:</span><span class="c1">//certain-ideally-foal.ngrok-free.app/anime/predict/
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">@请求格式</span>
+</span></span></span><span class="line"><span class="cl"><span class="err">@请求格式</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="err">userid</span> <span class="err">:</span> <span class="err">...&lt;int&gt;,</span>  	   <span class="err">#</span> <span class="err">用户id</span>
 </span></span><span class="line"><span class="cl">    <span class="err">origin_image</span>  <span class="err">:</span> <span class="err">...&lt;url&gt;,</span> 	   <span class="err">#</span> <span class="err">原图片url链接</span> 
@@ -560,8 +472,6 @@ data = {
 
   </div>
 
-
-
   <footer class="post-footer">
     <ul class="post-tags">
       <li><a href="https://swimmingliu.cn/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%BD%9C%E4%B8%9A/">程序设计作业</a></li>
@@ -569,12 +479,10 @@ data = {
 <nav class="paginav">
   <a class="prev" href="https://swimmingliu.cn/posts/papernotes/2023-uncertainty-aware-attentionmechanism/">
     <span class="title">« Prev</span>
-    <br>
     <span>Uncertainty-Aware Attention Mechanism:利用不确定性感知注意机制进行肺结节分割和不确定区域预测</span>
   </a>
   <a class="next" href="https://swimmingliu.cn/posts/papernotes/2022-priorattentionnetwork/">
     <span class="title">Next »</span>
-    <br>
     <span>Prior Attention Network: 用于医学图像中多病灶分割的预先注意网络</span>
   </a>
 </nav>
@@ -584,27 +492,34 @@ data = {
     </main>
     
 <footer class="footer">
-        <span>&copy; 2023-2025 <a href="https://swimmingliu.cn/">SwimmingLiu&#39;s Blog</a></span> · 
+        <span>&copy; 2023-2026 <a href="https://swimmingliu.cn/">SwimmingLiu&#39;s Blog</a></span> · 
+        <span><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">浙ICP备2024056260号</a></span> · 
 
+    
+    
     <span>
         Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
-    <span>
-        <a href="https://beian.miit.gov.cn/">浙ICP备2024056260号</a>
-    </span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
     </svg>
 </a>
 
 <script>
-    let menu = document.getElementById('menu')
+    let menu = document.getElementById('menu');
     if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
         menu.onscroll = function () {
             localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
@@ -631,25 +546,25 @@ data = {
 
 </script>
 <script>
-    var mybutton = document.getElementById("top-link");
+    var toplink = document.getElementById("top-link");
     window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
         } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
+            toplink.classList.add("hidden");
         }
     };
 
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
             localStorage.setItem("pref-theme", 'light');
         } else {
-            document.body.classList.add('dark');
+            html.dataset.theme = 'dark';
             localStorage.setItem("pref-theme", 'dark');
         }
     })
@@ -702,8 +617,7 @@ data = {
         }
     });
 </script>
+
 </body>
 
 </html>
-
-

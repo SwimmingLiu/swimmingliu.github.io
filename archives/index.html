@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en" dir="auto" data-theme="auto">
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +10,12 @@
 <meta name="description" content="archives">
 <meta name="author" content="👨🏻‍🎓 SwimmingLiu">
 <link rel="canonical" href="https://swimmingliu.cn/archives/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.6ecbb0040febd20e47edd88a662c19f1ea945bf7427774b86594271d18f88faf.css" integrity="sha256-bsuwBA/r0g5H7diKZiwZ8eqUW/dCd3S4ZZQnHRj4j68=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://swimmingliu.cn/images/swimmingliu_icon.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://swimmingliu.cn/images/swimmingliu_icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://swimmingliu.cn/images/swimmingliu_icon.png">
-<link rel="apple-touch-icon" href="https://swimmingliu.cn/images/swimmingliu_icon.png">
-<link rel="mask-icon" href="https://swimmingliu.cn/images/swimmingliu_icon.png">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a0fc02d530b8a50c21c1761776b2bddbbda4bb72d45c30ebfd02f2df8cf4235d.css" integrity="sha256-oPwC1TC4pQwhwXYXdrK9272ku3LUXDDr/QLy34z0I10=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://oss.swimmingliu.cn/swimmingliu_icon-7772456ede34.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="https://oss.swimmingliu.cn/swimmingliu_icon-7772456ede34.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://oss.swimmingliu.cn/swimmingliu_icon-7772456ede34.jpg">
+<link rel="apple-touch-icon" href="https://oss.swimmingliu.cn/swimmingliu_icon-7772456ede34.jpg">
+<link rel="mask-icon" href="https://oss.swimmingliu.cn/swimmingliu_icon-7772456ede34.jpg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <link rel="alternate" hreflang="en" href="https://swimmingliu.cn/archives/">
@@ -39,34 +39,43 @@
                 --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
+                color-scheme: dark;
             }
 
             .list {
                 background: var(--theme);
             }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
+            .toc {
+                background: var(--entry);
             }
         }
 
     </style>
 </noscript>
-<meta property="og:url" content="https://swimmingliu.cn/archives/">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://swimmingliu.cn/archives/">
   <meta property="og:site_name" content="SwimmingLiu&#39;s Blog">
   <meta property="og:title" content="⏱ timeline">
   <meta property="og:description" content="archives">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
       <meta property="og:image" content="https://swimmingliu.cn/papermod-cover.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://swimmingliu.cn/papermod-cover.png">
-<meta name="twitter:title" content="⏱ timeline">
-<meta name="twitter:description" content="archives">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://swimmingliu.cn/papermod-cover.png">
+  <meta name="twitter:title" content="⏱ timeline">
+  <meta name="twitter:description" content="archives">
 
 
 <script type="application/ld+json">
@@ -111,39 +120,27 @@
     "name": "SwimmingLiu's Blog",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://swimmingliu.cn/images/swimmingliu_icon.png"
+      "url": "https://oss.swimmingliu.cn/swimmingliu_icon-7772456ede34.jpg"
     }
   }
 }
 </script>
 </head>
-
 <body class="list" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
+    <header class="header">
+    <nav class="header-nav">
         <div class="logo">
             <a href="https://swimmingliu.cn/" accesskey="h" title="𝓢𝔀𝓲𝓶𝓶𝓲𝓷𝓰𝓛𝓲𝓾&#39;𝓼 𝓑𝓵𝓸𝓰 (Alt + H)">
-                <img src="https://swimmingliu.cn/images/swimmingliu_icon.png" alt="" aria-label="logo"
+                <img src="https://oss.swimmingliu.cn/swimmingliu_icon-7772456ede34.jpg" alt="" aria-label="logo"
                     height="30">𝓢𝔀𝓲𝓶𝓶𝓲𝓷𝓰𝓛𝓲𝓾&#39;𝓼 𝓑𝓵𝓸𝓰</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -159,7 +156,7 @@
                 </button>
             </div>
         </div>
-        <ul id="menu">
+        <ul id="menu" class="menu">
             <li>
                 <a href="https://swimmingliu.cn/index.html" title="🏡 Home">
                     <span>🏡 Home</span>
@@ -186,19 +183,8 @@
                 </a>
             </li>
             <li>
-                <a href="https://bento.me/swimmingliu" title="👨🏻‍🎓 About Me">
+                <a href="https://avely.me/swimmingliu" title="👨🏻‍🎓 About Me">
                     <span>👨🏻‍🎓 About Me</span>&nbsp;
-                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
-                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                        <path d="M15 3h6v6"></path>
-                        <path d="M10 14L21 3"></path>
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.emojisearch.app/" title="Emoji">
-                    <span>Emoji</span>&nbsp;
                     <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
                         stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
                         <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
@@ -239,13 +225,17 @@
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">美团历年算法真题合集
         </h3>
-        <div class="archive-meta"><span title='2025-08-28 21:27:35 +0800 +0800'>August 28, 2025</span>&nbsp;·&nbsp;15 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2025-08-28 21:27:35 +0800 +0800'>August 28, 2025</span>&nbsp;·&nbsp;<span>15 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to 美团历年算法真题合集" href="https://swimmingliu.cn/posts/job/meituan-algorithm-quiz-notes/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">Coze工作流分析
         </h3>
-        <div class="archive-meta"><span title='2025-08-07 23:27:35 +0800 +0800'>August 7, 2025</span>&nbsp;·&nbsp;31 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2025-08-07 23:27:35 +0800 +0800'>August 7, 2025</span>&nbsp;·&nbsp;<span>31 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to Coze工作流分析" href="https://swimmingliu.cn/posts/job/coze-workflow-analysis/"></a>
       </div>
     </div>
@@ -259,13 +249,17 @@
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">Leetcode Hot100 刷题笔记
         </h3>
-        <div class="archive-meta"><span title='2025-07-20 23:27:35 +0800 +0800'>July 20, 2025</span>&nbsp;·&nbsp;29 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2025-07-20 23:27:35 +0800 +0800'>July 20, 2025</span>&nbsp;·&nbsp;<span>29 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to Leetcode Hot100 刷题笔记" href="https://swimmingliu.cn/posts/job/leetcode-hot100-notes/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">Java场景100题
         </h3>
-        <div class="archive-meta"><span title='2025-07-06 13:27:35 +0800 +0800'>July 6, 2025</span>&nbsp;·&nbsp;11 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2025-07-06 13:27:35 +0800 +0800'>July 6, 2025</span>&nbsp;·&nbsp;<span>11 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to Java场景100题" href="https://swimmingliu.cn/posts/job/java-scene-quiz-100/"></a>
       </div>
     </div>
@@ -279,7 +273,9 @@
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">恒生聚源面经记录
         </h3>
-        <div class="archive-meta"><span title='2025-05-06 13:27:35 +0800 +0800'>May 6, 2025</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2025-05-06 13:27:35 +0800 +0800'>May 6, 2025</span>&nbsp;·&nbsp;<span>7 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to 恒生聚源面经记录" href="https://swimmingliu.cn/posts/job/hensheng-interview-questions/"></a>
       </div>
     </div>
@@ -293,31 +289,41 @@
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">JVM 面试题笔记
         </h3>
-        <div class="archive-meta"><span title='2025-03-22 21:45:41 +0800 +0800'>March 22, 2025</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2025-03-22 21:45:41 +0800 +0800'>March 22, 2025</span>&nbsp;·&nbsp;<span>5 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to JVM 面试题笔记" href="https://swimmingliu.cn/posts/job/java-jvm-interview-questions/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">计算机网络面试题笔记
         </h3>
-        <div class="archive-meta"><span title='2025-03-13 21:49:44 +0800 +0800'>March 13, 2025</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2025-03-13 21:49:44 +0800 +0800'>March 13, 2025</span>&nbsp;·&nbsp;<span>7 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to 计算机网络面试题笔记" href="https://swimmingliu.cn/posts/job/computer-networks-interview-questions/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">设计模式面试题笔记
         </h3>
-        <div class="archive-meta"><span title='2025-03-07 21:44:36 +0800 +0800'>March 7, 2025</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2025-03-07 21:44:36 +0800 +0800'>March 7, 2025</span>&nbsp;·&nbsp;<span>5 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to 设计模式面试题笔记" href="https://swimmingliu.cn/posts/job/desgin-mode-interview-questions/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">(JUC) Java并发面试题笔记
         </h3>
-        <div class="archive-meta"><span title='2025-03-05 21:45:49 +0800 +0800'>March 5, 2025</span>&nbsp;·&nbsp;16 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2025-03-05 21:45:49 +0800 +0800'>March 5, 2025</span>&nbsp;·&nbsp;<span>16 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to (JUC) Java并发面试题笔记" href="https://swimmingliu.cn/posts/job/java-juc-interview-questions/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">操作系统面试题笔记
         </h3>
-        <div class="archive-meta"><span title='2025-03-01 09:49:44 +0800 +0800'>March 1, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2025-03-01 09:49:44 +0800 +0800'>March 1, 2025</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to 操作系统面试题笔记" href="https://swimmingliu.cn/posts/job/operation-system-interview-questions/"></a>
       </div>
     </div>
@@ -331,31 +337,41 @@
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">个人简历常问问题
         </h3>
-        <div class="archive-meta"><span title='2025-02-27 10:52:54 +0800 +0800'>February 27, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2025-02-27 10:52:54 +0800 +0800'>February 27, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to 个人简历常问问题" href="https://swimmingliu.cn/posts/job/personal-interview-hot-question/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">Redis面试题笔记
         </h3>
-        <div class="archive-meta"><span title='2025-02-20 21:21:45 +0800 +0800'>February 20, 2025</span>&nbsp;·&nbsp;10 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2025-02-20 21:21:45 +0800 +0800'>February 20, 2025</span>&nbsp;·&nbsp;<span>10 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to Redis面试题笔记" href="https://swimmingliu.cn/posts/job/redis-interview-questions/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">Java集合面试题笔记
         </h3>
-        <div class="archive-meta"><span title='2025-02-20 21:20:50 +0800 +0800'>February 20, 2025</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2025-02-20 21:20:50 +0800 +0800'>February 20, 2025</span>&nbsp;·&nbsp;<span>5 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to Java集合面试题笔记" href="https://swimmingliu.cn/posts/job/java-set-interview-questions/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">Java基础题面试笔记
         </h3>
-        <div class="archive-meta"><span title='2025-02-19 15:18:58 +0800 +0800'>February 19, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2025-02-19 15:18:58 +0800 +0800'>February 19, 2025</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to Java基础题面试笔记" href="https://swimmingliu.cn/posts/job/java-basic-interview-questions/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">MySQL面试题笔记
         </h3>
-        <div class="archive-meta"><span title='2025-02-19 15:16:42 +0800 +0800'>February 19, 2025</span>&nbsp;·&nbsp;20 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2025-02-19 15:16:42 +0800 +0800'>February 19, 2025</span>&nbsp;·&nbsp;<span>20 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to MySQL面试题笔记" href="https://swimmingliu.cn/posts/job/mysql-interview-questions/"></a>
       </div>
     </div>
@@ -375,7 +391,9 @@
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">Java面试题-随手记
         </h3>
-        <div class="archive-meta"><span title='2024-12-27 17:27:35 +0800 +0800'>December 27, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2024-12-27 17:27:35 +0800 +0800'>December 27, 2024</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to Java面试题-随手记" href="https://swimmingliu.cn/posts/job/java-interview-questions-notes/"></a>
       </div>
     </div>
@@ -389,13 +407,17 @@
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">A Dual-Branch Framework with Prior Knowledge for Precise Segmentation of Lung Nodules in Challenging CT Scans
         </h3>
-        <div class="archive-meta"><span title='2024-03-03 15:37:07 +0800 +0800'>March 3, 2024</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2024-03-03 15:37:07 +0800 +0800'>March 3, 2024</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to A Dual-Branch Framework with Prior Knowledge for Precise Segmentation of Lung Nodules in Challenging CT Scans" href="https://swimmingliu.cn/posts/papernotes/2023-dbnet/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information
         </h3>
-        <div class="archive-meta"><span title='2024-03-01 15:26:23 +0800 +0800'>March 1, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2024-03-01 15:26:23 +0800 +0800'>March 1, 2024</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information" href="https://swimmingliu.cn/posts/papernotes/2024-yolov9/"></a>
       </div>
     </div>
@@ -409,13 +431,17 @@
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">YOLOSHOW - YOLOv5/YOLOv7/YOLOv8/YOLOv9/RTDETR GUI based on Pyside6
         </h3>
-        <div class="archive-meta"><span title='2024-02-18 19:30:06 +0800 +0800'>February 18, 2024</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2024-02-18 19:30:06 +0800 +0800'>February 18, 2024</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to YOLOSHOW - YOLOv5/YOLOv7/YOLOv8/YOLOv9/RTDETR GUI based on Pyside6" href="https://swimmingliu.cn/posts/diary/yoloshow/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">YOLOSHOW 中文版 - YOLOv5/YOLOv7/YOLOv8/YOLOv9/RTDETR GUI based on Pyside6
         </h3>
-        <div class="archive-meta"><span title='2024-02-18 19:30:06 +0800 +0800'>February 18, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2024-02-18 19:30:06 +0800 +0800'>February 18, 2024</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to YOLOSHOW 中文版 - YOLOv5/YOLOv7/YOLOv8/YOLOv9/RTDETR GUI based on Pyside6" href="https://swimmingliu.cn/posts/diary/yoloshow-cn/"></a>
       </div>
     </div>
@@ -429,13 +455,17 @@
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">ZSTU服务器使用教程 (Yang Li Lab)
         </h3>
-        <div class="archive-meta"><span title='2024-01-05 13:47:03 +0800 +0800'>January 5, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2024-01-05 13:47:03 +0800 +0800'>January 5, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to ZSTU服务器使用教程 (Yang Li Lab)" href="https://swimmingliu.cn/posts/diary/zstu_server_manuscript/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">ZSTU Server Management
         </h3>
-        <div class="archive-meta"><span title='2024-01-04 21:36:25 +0800 +0800'>January 4, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2024-01-04 21:36:25 +0800 +0800'>January 4, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to ZSTU Server Management" href="https://swimmingliu.cn/posts/diary/zstu_server_management/"></a>
       </div>
     </div>
@@ -455,25 +485,33 @@
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">MovieKGQA: 基于知识图谱和neo4j图数据库的电影知识问答系统
         </h3>
-        <div class="archive-meta"><span title='2023-12-12 12:18:57 +0800 +0800'>December 12, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2023-12-12 12:18:57 +0800 +0800'>December 12, 2023</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to MovieKGQA: 基于知识图谱和neo4j图数据库的电影知识问答系统" href="https://swimmingliu.cn/posts/diary/2023-moviekgqa/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">U-NET V2: RETHINKING THE SKIP CONNECTIONS OF U-NET FOR MEDICAL IMAGE SEGMENTATION
         </h3>
-        <div class="archive-meta"><span title='2023-12-11 20:49:32 +0800 +0800'>December 11, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2023-12-11 20:49:32 +0800 +0800'>December 11, 2023</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to U-NET V2: RETHINKING THE SKIP CONNECTIONS OF U-NET FOR MEDICAL IMAGE SEGMENTATION" href="https://swimmingliu.cn/posts/papernotes/2023-unet_v2/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">Uncertainty-Aware Attention Mechanism:利用不确定性感知注意机制进行肺结节分割和不确定区域预测
         </h3>
-        <div class="archive-meta"><span title='2023-12-04 16:28:11 +0800 +0800'>December 4, 2023</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2023-12-04 16:28:11 +0800 +0800'>December 4, 2023</span>&nbsp;·&nbsp;<span>5 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to Uncertainty-Aware Attention Mechanism:利用不确定性感知注意机制进行肺结节分割和不确定区域预测" href="https://swimmingliu.cn/posts/papernotes/2023-uncertainty-aware-attentionmechanism/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">程序设计作业接口文档
         </h3>
-        <div class="archive-meta"><span title='2023-12-02 21:40:07 +0800 +0800'>December 2, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2023-12-02 21:40:07 +0800 +0800'>December 2, 2023</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to 程序设计作业接口文档" href="https://swimmingliu.cn/posts/diary/2023-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%BD%9C%E4%B8%9A%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/"></a>
       </div>
     </div>
@@ -487,31 +525,41 @@
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">Prior Attention Network: 用于医学图像中多病灶分割的预先注意网络
         </h3>
-        <div class="archive-meta"><span title='2023-11-28 14:55:47 +0800 +0800'>November 28, 2023</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2023-11-28 14:55:47 +0800 +0800'>November 28, 2023</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to Prior Attention Network: 用于医学图像中多病灶分割的预先注意网络" href="https://swimmingliu.cn/posts/papernotes/2022-priorattentionnetwork/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">地大服务器使用教程
         </h3>
-        <div class="archive-meta"><span title='2023-11-20 12:25:57 +0800 +0800'>November 20, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2023-11-20 12:25:57 +0800 +0800'>November 20, 2023</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to 地大服务器使用教程" href="https://swimmingliu.cn/posts/diary/2023-%E5%9C%B0%E5%A4%A7%E6%9C%8D%E5%8A%A1%E5%99%A8/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">ACC-UNet: A Completely Convolutional UNet model for the 2020s (MICCAI2023)
         </h3>
-        <div class="archive-meta"><span title='2023-11-12 16:32:06 +0800 +0800'>November 12, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2023-11-12 16:32:06 +0800 +0800'>November 12, 2023</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to ACC-UNet: A Completely Convolutional UNet model for the 2020s (MICCAI2023)" href="https://swimmingliu.cn/posts/papernotes/2023-acc-unet/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">M2SNet: Multi-scale in Multi-scale Subtraction Network for Medical Image Segmentation
         </h3>
-        <div class="archive-meta"><span title='2023-11-12 16:25:03 +0800 +0800'>November 12, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2023-11-12 16:25:03 +0800 +0800'>November 12, 2023</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to M2SNet: Multi-scale in Multi-scale Subtraction Network for Medical Image Segmentation" href="https://swimmingliu.cn/posts/papernotes/2023-m2snet/"></a>
       </div>
       <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">EGE-UNet: an Efficient Group Enhanced UNet for skin lesion segmentation
         </h3>
-        <div class="archive-meta"><span title='2023-11-11 19:51:21 +0800 +0800'>November 11, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;SwimmingLiu</div>
+        <div class="archive-meta">
+
+<span title='2023-11-11 19:51:21 +0800 +0800'>November 11, 2023</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>SwimmingLiu</span></div>
         <a class="entry-link" aria-label="post link to EGE-UNet: an Efficient Group Enhanced UNet for skin lesion segmentation" href="https://swimmingliu.cn/posts/papernotes/2023-ege-unet%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"></a>
       </div>
     </div>
@@ -520,27 +568,34 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2023-2025 <a href="https://swimmingliu.cn/">SwimmingLiu&#39;s Blog</a></span> · 
+        <span>&copy; 2023-2026 <a href="https://swimmingliu.cn/">SwimmingLiu&#39;s Blog</a></span> · 
+        <span><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">浙ICP备2024056260号</a></span> · 
 
+    
+    
     <span>
         Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
-    <span>
-        <a href="https://beian.miit.gov.cn/">浙ICP备2024056260号</a>
-    </span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
     </svg>
 </a>
 
 <script>
-    let menu = document.getElementById('menu')
+    let menu = document.getElementById('menu');
     if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
         menu.onscroll = function () {
             localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
@@ -567,32 +622,31 @@
 
 </script>
 <script>
-    var mybutton = document.getElementById("top-link");
+    var toplink = document.getElementById("top-link");
     window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
         } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
+            toplink.classList.add("hidden");
         }
     };
 
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
             localStorage.setItem("pref-theme", 'light');
         } else {
-            document.body.classList.add('dark');
+            html.dataset.theme = 'dark';
             localStorage.setItem("pref-theme", 'dark');
         }
     })
 
 </script>
+
 </body>
 
 </html>
-
-

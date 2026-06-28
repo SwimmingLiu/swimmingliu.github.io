@@ -9,7 +9,7 @@
       <url>https://swimmingliu.cn/papermod-cover.png</url>
       <link>https://swimmingliu.cn/papermod-cover.png</link>
     </image>
-    <generator>Hugo -- 0.152.2</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 20 Feb 2025 21:21:45 +0800</lastBuildDate>
     <atom:link href="https://swimmingliu.cn/tags/redis/index.xml" rel="self" type="application/rss+xml" />
@@ -60,26 +60,26 @@
 &lt;li&gt;&lt;strong&gt;为什么用&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;问题&lt;/th&gt;
-          &lt;th&gt;解决方案&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;容量不足&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;数据分片，将数据分散不存到不同的主节点&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;高并发写入&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;数据分片，将写入请求分摊到多个主节点&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;strong&gt;主机宕机问题&lt;/strong&gt;&lt;/td&gt;
-          &lt;td&gt;自动切换主从节点，避免影响服务， 不需要手动修改客户端配置&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;问题&lt;/th&gt;
+					&lt;th&gt;解决方案&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;容量不足&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;数据分片，将数据分散不存到不同的主节点&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;高并发写入&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;数据分片，将写入请求分摊到多个主节点&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;主机宕机问题&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;自动切换主从节点，避免影响服务， 不需要手动修改客户端配置&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;节点通信协议&lt;/strong&gt;：Redis集群采用Gossip协议, 支持分布式信息传播、延迟低、效率高。采用去中心化思想，任意实例(主节点)都可以作为请求入口，节点间相互通信。&lt;/li&gt;
